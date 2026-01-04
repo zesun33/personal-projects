@@ -47,7 +47,19 @@ These three projects were selected to cover the distinct layers of the modern AI
 
 ---
 
-## 2. Open Source Contribution Strategy
+## 2. The First-Principles Methodology
+
+In addition to building high-performance code, this portfolio adopts a "Learn in Public" and "Deep Dive" approach. 
+Each project contains a dedicated `notes/` directory serving as a self-contained knowledge base.
+
+*   **Theory First**: Before writing a single line of CUDA or Triton, I document the mathematical and architectural fundamentals (e.g., Tiling theory, Memory coalescing, Warps).
+*   **Step-by-Step Implementation**: The code is built iteratively (Naive -> Optimized -> Hyper-Optimized), with each stage documented.
+*   **"Why" over "How"**: Every optimization decision is justified with hardware principles (e.g., "Why use shared memory here?" -> "To reduce global memory bandwidth pressure").
+*   **Knowledge Source**: These `.md` files serve as a permanent learning guide and reference for the underlying systems engineering concepts.
+
+---
+
+## 3. Open Source Contribution Strategy
 
 Beyond this portfolio, I am actively targeting contributions to high-impact open-source repositories to prove "Production Readiness."
 
