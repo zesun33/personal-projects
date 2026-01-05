@@ -1,72 +1,144 @@
 # Hardware Acceleration & ML Systems Portfolio
 
-This repository collection demonstrates a complete mastery of the "AI Hardware Stack," from low-level kernel optimization to modern compiler infrastructure and production deployment.
+A learning-focused portfolio demonstrating mastery of the AI Hardware Stack: CUDA, Memory Systems, Parallel Computing, and Production Deployment.
 
-## Strategic Goal: The "Lucrative" Switch
-This portfolio is engineered to bridge the gap between **Academic Research** (PhD/SciPy/PyTorch) and **Production AI Engineering** (C++/CUDA/Compilers).
+## 📊 Skills Coverage Matrix
 
-The goal is to demonstrate "Vertical Integration": the rare ability to not just *design* a model (Research), but to *scale* and *optimize* it for hardware (Systems). This skill set is critical for top-tier teams at NVIDIA, Meta (PyTorch Team), Google (XLA/TPU), and Microsoft (ONNX).
-
----
-
-## 1. Core Portfolio Projects (The "Trifecta")
-
-These three projects were selected to cover the distinct layers of the modern AI stack.
-
-### [Foundation] CUDA GEMM Optimization
-*   **Repo**: [`cuda-gemm-optimization`](./cuda-gemm-optimization)
-*   **The Industry "Why"**:
-    *   **CUDA** is the "Assembly Language" of modern AI. Knowing it distinguishes you from 99% of ML practitioners who only know Python.
-    *   **GEMM (General Matrix Multiply)** is the atomic unit of Deep Learning (90%+ of FLOPs in LLMs).
-*   **Implementation Plan**:
-    *   Start with a naive C++ kernel.
-    *   Implement **Global Memory Coalescing** to maximize bandwidth.
-    *   Use **Shared Memory Tiling** to minimize latency (the "classic" GPU interview question).
-    *   Finalize with **Tensor Core (WMMA)** instructions to unlock FP16 peak performance.
-*   **Target**: Achieve >80% of `cuBLAS` performance.
-
-### [Compiler] FlashAttention Lite (Triton)
-*   **Repo**: [`triton-flash-attention-lite`](./triton-flash-attention-lite)
-*   **The Industry "Why"**:
-    *   **OpenAI Triton** is the "Disruptor." It allows writing GPU kernels in Python-like syntax.
-    *   Major labs (Meta, OpenAI) are actively rewriting their fastest kernels in Triton. It is a "Unicorn Skill."
-*   **Implementation Plan**:
-    *   Re-implement the **FlashAttention** algorithm (tiling Q, K, V blocks in SRAM) to reduce HBM reads.
-    *   Focus on **Block-level Memory Management** rather than thread-level (CUDA).
-*   **Target**: Write a 100-line kernel that outperforms standard PyTorch Attention on long sequences (N > 4096).
-
-### [Deployment] ResNet "Speed Run" (TensorRT)
-*   **Repo**: [`resnet-tensorrt-bench`](./resnet-tensorrt-bench)
-*   **The Industry "Why"**:
-    *   **TensorRT** is the "Closer." It is what runs inside self-driving cars, robots, and real-time clouds.
-    *   The industry needs engineers who understand **Quantization** (FP16/INT8) and trade-offs between throughput and latency.
-*   **Implementation Plan**:
-    *   Export a standard ResNet50/ViT to **ONNX**.
-    *   Build a **TensorRT Engine** with explicit FP16 refinement.
-    *   Profile **Latency (ms)** vs **Throughput (img/sec)**.
+| Skill | Project(s) | Status |
+|-------|-----------|--------|
+| **CUDA Kernels** | cuda-gemm-optimization, cuda-memory-benchmark | ✅ Active |
+| **Memory Systems** | cuda-memory-benchmark | ✅ Active |
+| **Quantization (INT8/FP16)** | resnet-tensorrt-bench | 🔄 Planned |
+| **OpenMP/MPI** | parallel-computing-lab | ✅ Active |
+| **TensorRT** | resnet-tensorrt-bench | 🔄 Planned |
+| **Triton Compiler** | triton-flash-attention-lite | 🔄 Planned |
 
 ---
 
-## 2. The First-Principles Methodology
+## 🚀 Core Portfolio Projects
 
-In addition to building high-performance code, this portfolio adopts a "Learn in Public" and "Deep Dive" approach. 
-Each project contains a dedicated `notes/` directory serving as a self-contained knowledge base.
+### 1. [Foundation] CUDA GEMM Optimization
+**Status**: 🔄 In Progress  
+**Path**: [`cuda-gemm-optimization/`](./cuda-gemm-optimization)
 
-*   **Theory First**: Before writing a single line of CUDA or Triton, I document the mathematical and architectural fundamentals (e.g., Tiling theory, Memory coalescing, Warps).
-*   **Step-by-Step Implementation**: The code is built iteratively (Naive -> Optimized -> Hyper-Optimized), with each stage documented.
-*   **"Why" over "How"**: Every optimization decision is justified with hardware principles (e.g., "Why use shared memory here?" -> "To reduce global memory bandwidth pressure").
-*   **Knowledge Source**: These `.md` files serve as a permanent learning guide and reference for the underlying systems engineering concepts.
+Learn GPU kernel optimization from naive to highly optimized:
+- ⬜ Naive GEMM (baseline) ← **Current**
+- ⬜ Global Memory Coalescing
+- ⬜ Shared Memory Tiling
+- ⬜ Vectorized Loads (float4)
+- ⬜ Tensor Core (WMMA)
+
+**Target**: Achieve >80% of cuBLAS performance.
 
 ---
 
-## 3. Open Source Contribution Strategy
+### 2. [Memory] CUDA Memory Benchmark ⭐ NEW
+**Status**: 🔄 In Progress  
+**Path**: [`cuda-memory-benchmark/`](./cuda-memory-benchmark)
 
-Beyond this portfolio, I am actively targeting contributions to high-impact open-source repositories to prove "Production Readiness."
+Understand GPU memory hierarchy and optimization:
+- ✅ Memory hierarchy theory
+- ✅ Bandwidth theory & roofline model
+- ✅ Coalescing patterns
+- ✅ Bank conflicts
+- ⬜ Implement bandwidth benchmarks
 
-*   **SpikingJelly (SNNs)**: Targeting Issue #576 (STDPLearner Memory Leak). Fixing a memory leak proves ability to profile and debug complex research code.
-*   **Hugging Face Transformers**: Targeting Issue #28103 (SDPA Support for OWL-VIT). Adding Scaled Dot Product Attention proves knowledge of modern PyTorch optimization.
-*   **TorchAO (Architecture Optimization)**: Targeting FP8 Benchmarking (Issue #2713), aligning with the industry shift to low-precision training on H100s.
+**Relevance**: Critical for Micron-style memory systems roles.
 
-## Future Roadmap
-*   **SNN Optimization**: Implementing custom CUDA kernels for LIF neuron updates.
-*   **LLM Serving**: Integrating PagedAttention (vLLM style) into the Triton kernel.
+---
+
+### 3. [Parallel] Parallel Computing Lab ⭐ NEW
+**Status**: 🔄 In Progress  
+**Path**: [`parallel-computing-lab/`](./parallel-computing-lab)
+
+Master CPU parallel programming:
+- ✅ Parallel computing concepts
+- ✅ OpenMP basics
+- ⬜ OpenMP examples (hello, parallel_for, reduction)
+- ⬜ MPI basics (future)
+- ⬜ Hybrid OpenMP+MPI (future)
+
+**Relevance**: Covers OpenMP/MPI from Micron preferred qualifications.
+
+---
+
+### 4. [Deployment] TensorRT Quantization Benchmark
+**Status**: ⬜ Skeleton  
+**Path**: [`resnet-tensorrt-bench/`](./resnet-tensorrt-bench)
+
+Production inference optimization:
+- ⬜ ONNX export from PyTorch
+- ⬜ TensorRT engine building
+- ⬜ FP32 → FP16 → INT8 comparison
+- ⬜ Calibration for INT8
+
+**Prerequisite**: Requires TensorRT SDK installation.
+
+---
+
+### 5. [Compiler] FlashAttention Lite (Triton)
+**Status**: ⬜ Skeleton  
+**Path**: [`triton-flash-attention-lite/`](./triton-flash-attention-lite)
+
+Modern GPU kernel development:
+- ⬜ Triton basics
+- ⬜ FlashAttention algorithm
+- ⬜ Block-level memory management
+
+---
+
+## 📖 Learning Philosophy
+
+**Theory First, Code Second**: Each project has a `notes/` directory with:
+1. Theory and fundamentals
+2. Step-by-step explanations
+3. Study questions and exercises
+4. References
+
+**Incremental Implementation**: Code files include:
+- `TODO` sections to complete
+- Expected results for verification
+- Exercises for deeper understanding
+
+---
+
+## 🎯 Industry Relevance
+
+| Target Role | Key Projects |
+|-------------|-------------|
+| **Micron ML Engineering** | cuda-memory-benchmark, parallel-computing-lab |
+| **NVIDIA/GPU Engineering** | All CUDA projects, triton-flash-attention |
+| **ML Infrastructure** | resnet-tensorrt-bench, cuda-gemm-optimization |
+| **HPC/Cloud** | parallel-computing-lab, cuda-memory-benchmark |
+
+---
+
+## 🔧 Prerequisites
+
+- **CUDA Toolkit**: For all CUDA projects
+- **GCC with OpenMP**: `g++ -fopenmp` (included with GCC)
+- **TensorRT SDK**: For resnet-tensorrt-bench (optional)
+- **NVIDIA GPU**: For running CUDA code
+
+---
+
+## 📚 Learning Order (Recommended)
+
+1. **Start**: `cuda-memory-benchmark` (notes only) — Understand memory hierarchy
+2. **Then**: `parallel-computing-lab/openmp` — Learn parallel patterns
+3. **Then**: Complete `cuda-gemm-optimization` — Apply memory concepts
+4. **Later**: TensorRT and Triton projects
+
+---
+
+## 📈 Progress Tracking
+
+Last Updated: January 2026
+
+| Project | Notes | Code | Verified |
+|---------|-------|------|----------|
+| cuda-gemm-optimization | 4/7 | 1/5 | ✅ Naive |
+| cuda-memory-benchmark | 5/5 | 0/5 | ⬜ |
+| parallel-computing-lab | 2/4 | 2/5 | ⬜ |
+| resnet-tensorrt-bench | 0/3 | 0/4 | ⬜ |
+| triton-flash-attention-lite | 0/3 | 0/2 | ⬜ |
