@@ -8,21 +8,20 @@ A learning-focused portfolio demonstrating mastery of the AI Hardware Stack: CUD
 |-------|-----------|--------|
 | **CUDA Kernels** | cuda-gemm-optimization, cuda-memory-benchmark | ✅ Active |
 | **Memory Systems** | cuda-memory-benchmark | ✅ Active |
-| **Quantization (INT8/FP16)** | resnet-tensorrt-bench | 🔄 Planned |
+| **Quantization (INT8/FP16)** | resnet-tensorrt-bench | ⬜ Planned |
 | **OpenMP/MPI** | parallel-computing-lab | ✅ Active |
-| **TensorRT** | resnet-tensorrt-bench | 🔄 Planned |
-| **Triton Compiler** | triton-flash-attention-lite | 🔄 Planned |
+| **TensorRT** | resnet-tensorrt-bench | ⬜ Planned |
+| **Triton Compiler** | triton-flash-attention-lite | ⬜ Planned |
 
 ---
 
 ## 🚀 Core Portfolio Projects
 
 ### 1. [Foundation] CUDA GEMM Optimization
-**Status**: 🔄 In Progress  
-**Path**: [`cuda-gemm-optimization/`](./cuda-gemm-optimization)
+**Status**: 🔄 In Progress | [View Repo](./cuda-gemm-optimization)
 
 Learn GPU kernel optimization from naive to highly optimized:
-- ⬜ Naive GEMM (baseline) ← **Current**
+- ✅ Naive GEMM (baseline)
 - ⬜ Global Memory Coalescing
 - ⬜ Shared Memory Tiling
 - ⬜ Vectorized Loads (float4)
@@ -33,14 +32,12 @@ Learn GPU kernel optimization from naive to highly optimized:
 ---
 
 ### 2. [Memory] CUDA Memory Benchmark ⭐ NEW
-**Status**: 🔄 In Progress  
-**Path**: [`cuda-memory-benchmark/`](./cuda-memory-benchmark)
+**Status**: 🔄 In Progress | [GitHub](https://github.com/zesun33/cuda-memory-benchmark)
 
 Understand GPU memory hierarchy and optimization:
-- ✅ Memory hierarchy theory
+- ✅ Memory hierarchy theory (5 notes)
 - ✅ Bandwidth theory & roofline model
-- ✅ Coalescing patterns
-- ✅ Bank conflicts
+- ✅ Coalescing patterns & bank conflicts
 - ⬜ Implement bandwidth benchmarks
 
 **Relevance**: Critical for Micron-style memory systems roles.
@@ -48,37 +45,34 @@ Understand GPU memory hierarchy and optimization:
 ---
 
 ### 3. [Parallel] Parallel Computing Lab ⭐ NEW
-**Status**: 🔄 In Progress  
-**Path**: [`parallel-computing-lab/`](./parallel-computing-lab)
+**Status**: 🔄 In Progress | [GitHub](https://github.com/zesun33/parallel-computing-lab)
 
 Master CPU parallel programming:
-- ✅ Parallel computing concepts
+- ✅ Parallel computing concepts (2 notes)
 - ✅ OpenMP basics
-- ⬜ OpenMP examples (hello, parallel_for, reduction)
+- ✅ Hello parallel & parallel_for examples
+- ⬜ Reduction, GEMM OpenMP
 - ⬜ MPI basics (future)
-- ⬜ Hybrid OpenMP+MPI (future)
 
 **Relevance**: Covers OpenMP/MPI from Micron preferred qualifications.
 
 ---
 
 ### 4. [Deployment] TensorRT Quantization Benchmark
-**Status**: ⬜ Skeleton  
-**Path**: [`resnet-tensorrt-bench/`](./resnet-tensorrt-bench)
+**Status**: ⬜ Planned | [View Repo](./resnet-tensorrt-bench)
 
 Production inference optimization:
 - ⬜ ONNX export from PyTorch
 - ⬜ TensorRT engine building
 - ⬜ FP32 → FP16 → INT8 comparison
-- ⬜ Calibration for INT8
+- ⬜ INT8 calibration
 
 **Prerequisite**: Requires TensorRT SDK installation.
 
 ---
 
 ### 5. [Compiler] FlashAttention Lite (Triton)
-**Status**: ⬜ Skeleton  
-**Path**: [`triton-flash-attention-lite/`](./triton-flash-attention-lite)
+**Status**: ⬜ Planned | [View Repo](./triton-flash-attention-lite)
 
 Modern GPU kernel development:
 - ⬜ Triton basics
@@ -116,29 +110,41 @@ Modern GPU kernel development:
 ## 🔧 Prerequisites
 
 - **CUDA Toolkit**: For all CUDA projects
-- **GCC with OpenMP**: `g++ -fopenmp` (included with GCC)
+- **GCC with OpenMP**: `g++ -fopenmp` (included with GCC ✅)
 - **TensorRT SDK**: For resnet-tensorrt-bench (optional)
+- **Triton**: `pip install triton` (optional)
 - **NVIDIA GPU**: For running CUDA code
 
 ---
 
-## 📚 Learning Order (Recommended)
+## 📚 Recommended Learning Order
 
-1. **Start**: `cuda-memory-benchmark` (notes only) — Understand memory hierarchy
-2. **Then**: `parallel-computing-lab/openmp` — Learn parallel patterns
-3. **Then**: Complete `cuda-gemm-optimization` — Apply memory concepts
-4. **Later**: TensorRT and Triton projects
+1. **cuda-memory-benchmark** (notes) — Understand memory hierarchy
+2. **parallel-computing-lab/openmp** — Learn parallel patterns
+3. **cuda-gemm-optimization** — Apply memory concepts to GEMM
+4. **resnet-tensorrt-bench** — Production deployment
+5. **triton-flash-attention-lite** — Modern compiler development
 
 ---
 
 ## 📈 Progress Tracking
 
-Last Updated: January 2026
+**Last Updated**: January 2026
 
 | Project | Notes | Code | Verified |
 |---------|-------|------|----------|
 | cuda-gemm-optimization | 4/7 | 1/5 | ✅ Naive |
-| cuda-memory-benchmark | 5/5 | 0/5 | ⬜ |
+| cuda-memory-benchmark | 5/5 | 1/5 | ⬜ |
 | parallel-computing-lab | 2/4 | 2/5 | ⬜ |
-| resnet-tensorrt-bench | 0/3 | 0/4 | ⬜ |
-| triton-flash-attention-lite | 0/3 | 0/2 | ⬜ |
+| resnet-tensorrt-bench | 0/4 | 0/5 | ⬜ |
+| triton-flash-attention-lite | 0/3 | 0/4 | ⬜ |
+
+---
+
+## 🔗 Repository Links
+
+| Project | GitHub |
+|---------|--------|
+| Main Portfolio | [hardware-portfolio-root](https://github.com/zesun33/hardware-portfolio-root) |
+| CUDA Memory Benchmark | [cuda-memory-benchmark](https://github.com/zesun33/cuda-memory-benchmark) |
+| Parallel Computing Lab | [parallel-computing-lab](https://github.com/zesun33/parallel-computing-lab) |
