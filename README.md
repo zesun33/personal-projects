@@ -18,7 +18,7 @@ A learning-focused portfolio demonstrating mastery of the AI Hardware Stack: CUD
 ## 🚀 Core Portfolio Projects
 
 ### 1. [Foundation] CUDA GEMM Optimization
-**Status**: 🔄 In Progress | [View Repo](./cuda-gemm-optimization)
+**Status**: 🔄 In Progress | [GitHub](https://github.com/zesun33/cuda-gemm-optimization)
 
 Learn GPU kernel optimization from naive to highly optimized:
 - ✅ Naive GEMM (baseline)
@@ -59,7 +59,7 @@ Master CPU parallel programming:
 ---
 
 ### 4. [Deployment] TensorRT Quantization Benchmark
-**Status**: ⬜ Planned | [View Repo](./resnet-tensorrt-bench)
+**Status**: ⬜ Planned | [GitHub](https://github.com/zesun33/resnet-tensorrt-bench)
 
 Production inference optimization:
 - ⬜ ONNX export from PyTorch
@@ -72,7 +72,7 @@ Production inference optimization:
 ---
 
 ### 5. [Compiler] FlashAttention Lite (Triton)
-**Status**: ⬜ Planned | [View Repo](./triton-flash-attention-lite)
+**Status**: ⬜ Planned | [GitHub](https://github.com/zesun33/triton-flash-attention-lite)
 
 Modern GPU kernel development:
 - ⬜ Triton basics
@@ -141,10 +141,12 @@ Modern GPU kernel development:
 
 ---
 
-## 🔗 Repository Links
+## 🔗 All Repository Links
 
-| Project | GitHub |
-|---------|--------|
-| Main Portfolio | [hardware-portfolio-root](https://github.com/zesun33/hardware-portfolio-root) |
-| CUDA Memory Benchmark | [cuda-memory-benchmark](https://github.com/zesun33/cuda-memory-benchmark) |
-| Parallel Computing Lab | [parallel-computing-lab](https://github.com/zesun33/parallel-computing-lab) |
+| Project | GitHub | Description |
+|---------|--------|-------------|
+| cuda-gemm-optimization | [Link](https://github.com/zesun33/cuda-gemm-optimization) | GEMM optimization from naive to Tensor Cores |
+| cuda-memory-benchmark | [Link](https://github.com/zesun33/cuda-memory-benchmark) | GPU memory hierarchy and bandwidth |
+| parallel-computing-lab | [Link](https://github.com/zesun33/parallel-computing-lab) | OpenMP/MPI parallel computing |
+| resnet-tensorrt-bench | [Link](https://github.com/zesun33/resnet-tensorrt-bench) | TensorRT quantization (FP32/FP16/INT8) |
+| triton-flash-attention-lite | [Link](https://github.com/zesun33/triton-flash-attention-lite) | FlashAttention with Triton compiler |
