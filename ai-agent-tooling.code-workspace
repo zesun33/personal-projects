@@ -1,0 +1,74 @@
+{
+    "folders": [
+        {
+            "name": "Portfolio (parent)",
+            "path": "portfolio"
+        },
+        {
+            "name": "mcp-verilog",
+            "path": "mcp-verilog"
+        },
+        {
+            "name": "hw-agent-skills",
+            "path": "hw-agent-skills"
+        },
+        {
+            "name": "mcp-cocotb",
+            "path": "mcp-cocotb"
+        },
+        {
+            "name": "mcp-yosys",
+            "path": "mcp-yosys"
+        },
+        {
+            "name": "mcp-rtl-review",
+            "path": "mcp-rtl-review"
+        },
+        {
+            "name": "mcp-openroad",
+            "path": "mcp-openroad"
+        },
+        {
+            "name": "kernel-forge",
+            "path": "kernel-forge"
+        },
+        {
+            "name": "agentic-asic",
+            "path": "agentic-asic"
+        }
+    ],
+    "settings": {
+        "editor.formatOnSave": true,
+        "[typescript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[typescriptreact]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[javascript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[python]": {
+            "editor.defaultFormatter": "ms-python.black-formatter"
+        },
+        "[go]": {
+            "editor.defaultFormatter": "golang.go"
+        },
+        "[markdown]": {
+            "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "esbenp.prettier-vscode",
+            "ms-python.python",
+            "ms-python.black-formatter",
+            "ms-python.isort",
+            "ms-python.mypy-type-checker",
+            "charliermarsh.ruff",
+            "golang.go",
+            "DavidAnson.vscode-markdownlint",
+            "tamasfe.even-better-toml"
+        ]
+    }
+}

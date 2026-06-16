@@ -1,1 +1,27 @@
 # Personal Projects Portfolio
+
+# Each new tool ships as its own repo on github.com/zesun33.
+# Locally, they live as sub-directories inside this workspace but are
+# tracked by their own git history, so the parent repo must ignore them.
+#
+# Add a new line here every time you scaffold a new standalone repo.
+
+/portfolio/
+# /mcp-verilog/
+# /hw-agent-skills/
+# /mcp-cocotb/
+# /mcp-yosys/
+# /mcp-rtl-review/
+# /mcp-openroad/
+# /kernel-forge/
+# /agentic-asic/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.iml
