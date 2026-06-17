@@ -7,7 +7,15 @@
 # Add a new line here every time you scaffold a new standalone repo.
 
 /portfolio/
+/eda-docker-images/
 # /mcp-verilog/
+# /hw-agent-skills/
+# /mcp-cocotb/
+# /mcp-yosys/
+# /mcp-rtl-review/
+# /mcp-openroad/
+# /kernel-forge/
+# /agentic-asic/
 # /hw-agent-skills/
 # /mcp-cocotb/
 # /mcp-yosys/
