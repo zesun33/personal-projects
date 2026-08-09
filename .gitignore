@@ -4,18 +4,13 @@
 # Locally, they live as sub-directories inside this workspace but are
 # tracked by their own git history, so the parent repo must ignore them.
 #
-# Add a new line here every time you scaffold a new standalone repo.
+# Uncomment a line when you scaffold that standalone repo locally.
 
 /portfolio/
 /eda-docker-images/
+/eda-devcontainer/
+# /gh-actions-for-hw/
 # /mcp-verilog/
-# /hw-agent-skills/
-# /mcp-cocotb/
-# /mcp-yosys/
-# /mcp-rtl-review/
-# /mcp-openroad/
-# /kernel-forge/
-# /agentic-asic/
 # /hw-agent-skills/
 # /mcp-cocotb/
 # /mcp-yosys/

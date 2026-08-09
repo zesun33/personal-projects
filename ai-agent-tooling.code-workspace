@@ -5,36 +5,12 @@
             "path": "portfolio"
         },
         {
-            "name": "mcp-verilog",
-            "path": "mcp-verilog"
+            "name": "eda-docker-images",
+            "path": "eda-docker-images"
         },
         {
-            "name": "hw-agent-skills",
-            "path": "hw-agent-skills"
-        },
-        {
-            "name": "mcp-cocotb",
-            "path": "mcp-cocotb"
-        },
-        {
-            "name": "mcp-yosys",
-            "path": "mcp-yosys"
-        },
-        {
-            "name": "mcp-rtl-review",
-            "path": "mcp-rtl-review"
-        },
-        {
-            "name": "mcp-openroad",
-            "path": "mcp-openroad"
-        },
-        {
-            "name": "kernel-forge",
-            "path": "kernel-forge"
-        },
-        {
-            "name": "agentic-asic",
-            "path": "agentic-asic"
+            "name": "eda-devcontainer",
+            "path": "eda-devcontainer"
         }
     ],
     "settings": {
