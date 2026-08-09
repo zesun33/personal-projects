@@ -1,0 +1,57 @@
+{
+  "folders": [
+    { "name": "personal-projects", "path": "." },
+    { "name": "hw-agent-tooling", "path": "hw-agent-tooling" },
+    { "name": "eda-docker-images", "path": "eda-docker-images" },
+    { "name": "eda-devcontainer", "path": "eda-devcontainer" },
+    { "name": "cuda-gemm-optimization", "path": "cuda-gemm-optimization" },
+    { "name": "cuda-memory-benchmark", "path": "cuda-memory-benchmark" },
+    { "name": "parallel-computing-lab", "path": "parallel-computing-lab" },
+    { "name": "resnet-tensorrt-bench", "path": "resnet-tensorrt-bench" },
+    { "name": "triton-flash-attention-lite", "path": "triton-flash-attention-lite" }
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "files.associations": {
+      "*.cu": "cpp",
+      "*.cuh": "cpp"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[go]": {
+      "editor.defaultFormatter": "golang.go"
+    },
+    "[cpp]": {
+      "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[c]": {
+      "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[markdown]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "python.analysis.typeCheckingMode": "basic"
+  },
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "ms-python.python",
+      "ms-python.black-formatter",
+      "ms-python.isort",
+      "ms-python.mypy-type-checker",
+      "charliermarsh.ruff",
+      "golang.go",
+      "DavidAnson.vscode-markdownlint",
+      "tamasfe.even-better-toml",
+      "ms-vscode.cpptools",
+      "NVIDIA.nsight-vscode-edition"
+    ]
+  }
+}

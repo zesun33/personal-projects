@@ -1,12 +1,20 @@
-# Personal Projects Portfolio
-
-# Each new tool ships as its own repo on github.com/zesun33.
-# Locally, they live as sub-directories inside this workspace but are
-# tracked by their own git history, so the parent repo must ignore them.
+# Personal Projects — meta repo
+#
+# Each project ships as its own repo on github.com/zesun33.
+# Locally they live as sub-directories here but keep their own git
+# history, so the parent must ignore them.
 #
 # Uncomment a line when you scaffold that standalone repo locally.
 
-/portfolio/
+# ML systems practice
+/cuda-gemm-optimization/
+/cuda-memory-benchmark/
+/parallel-computing-lab/
+/resnet-tensorrt-bench/
+/triton-flash-attention-lite/
+
+# HW agent tooling
+/hw-agent-tooling/
 /eda-docker-images/
 /eda-devcontainer/
 # /gh-actions-for-hw/
@@ -27,4 +35,5 @@ Thumbs.db
 *~
 .idea/
 .vscode/
+.cursor/
 *.iml
