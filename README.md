@@ -1,6 +1,6 @@
 # personal-projects
 
-Meta catalog and multi-root workspace for **zesun33** public learning and HW agent tooling repos.
+Meta catalog and multi-root workspace for **zesun33** public ML systems and HW agent tooling repos.
 
 - Website: [zesun33.github.io](https://zesun33.github.io)
 - Landing page for the agent-tooling family: [zesun33/hw-agent-tooling](https://github.com/zesun33/hw-agent-tooling)
@@ -36,9 +36,9 @@ git clone https://github.com/zesun33/eda-devcontainer.git
 
 ---
 
-## Family 2 — ML systems practice
+## Family 2 — ML systems
 
-Learning-focused repos covering CUDA kernels, memory systems, OpenMP, TensorRT, and Triton.
+Repos covering CUDA kernels, memory systems, OpenMP, TensorRT, and Triton.
 
 | Repo | Description | GitHub |
 |------|-------------|--------|

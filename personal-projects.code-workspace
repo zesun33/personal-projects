@@ -1,17 +1,54 @@
 {
   "folders": [
-    { "name": "personal-projects", "path": "." },
-    { "name": "hw-agent-tooling", "path": "hw-agent-tooling" },
-    { "name": "eda-docker-images", "path": "eda-docker-images" },
-    { "name": "eda-devcontainer", "path": "eda-devcontainer" },
-    { "name": "cuda-gemm-optimization", "path": "cuda-gemm-optimization" },
-    { "name": "cuda-memory-benchmark", "path": "cuda-memory-benchmark" },
-    { "name": "parallel-computing-lab", "path": "parallel-computing-lab" },
-    { "name": "resnet-tensorrt-bench", "path": "resnet-tensorrt-bench" },
-    { "name": "triton-flash-attention-lite", "path": "triton-flash-attention-lite" }
+    {
+      "name": "personal-projects",
+      "path": "."
+    },
+    {
+      "name": "hw-agent-tooling",
+      "path": "hw-agent-tooling"
+    },
+    {
+      "name": "eda-docker-images",
+      "path": "eda-docker-images"
+    },
+    {
+      "name": "eda-devcontainer",
+      "path": "eda-devcontainer"
+    },
+    {
+      "name": "cuda-gemm-optimization",
+      "path": "cuda-gemm-optimization"
+    },
+    {
+      "name": "cuda-memory-benchmark",
+      "path": "cuda-memory-benchmark"
+    },
+    {
+      "name": "parallel-computing-lab",
+      "path": "parallel-computing-lab"
+    },
+    {
+      "name": "resnet-tensorrt-bench",
+      "path": "resnet-tensorrt-bench"
+    },
+    {
+      "name": "triton-flash-attention-lite",
+      "path": "triton-flash-attention-lite"
+    }
   ],
   "settings": {
     "editor.formatOnSave": true,
+    "files.exclude": {
+      "hw-agent-tooling": true,
+      "eda-docker-images": true,
+      "eda-devcontainer": true,
+      "cuda-gemm-optimization": true,
+      "cuda-memory-benchmark": true,
+      "parallel-computing-lab": true,
+      "resnet-tensorrt-bench": true,
+      "triton-flash-attention-lite": true
+    },
     "files.associations": {
       "*.cu": "cpp",
       "*.cuh": "cpp"
