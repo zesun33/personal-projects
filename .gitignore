@@ -18,7 +18,7 @@
 /eda-docker-images/
 /eda-devcontainer/
 # /gh-actions-for-hw/
-# /mcp-verilog/
+/mcp-verilog/
 # /hw-agent-skills/
 # /mcp-cocotb/
 # /mcp-yosys/

@@ -25,11 +25,13 @@ MCP servers, agent skills, CLIs, and shared EDA container foundations that help 
 | [hw-agent-tooling](https://github.com/zesun33/hw-agent-tooling) | Landing page, roadmap, and verification for the agent-tooling family | [link](https://github.com/zesun33/hw-agent-tooling) |
 | [eda-docker-images](https://github.com/zesun33/eda-docker-images) | Docker/Podman images for Verilog, SPICE, FPGA, and ASIC open-source EDA | [link](https://github.com/zesun33/eda-docker-images) |
 | [eda-devcontainer](https://github.com/zesun33/eda-devcontainer) | VS Code / Cursor Dev Container profiles on those images | [link](https://github.com/zesun33/eda-devcontainer) |
+| [mcp-verilog](https://github.com/zesun33/mcp-verilog) | Model Context Protocol server for Verilog/SystemVerilog linting, compilation, and simulation | [link](https://github.com/zesun33/mcp-verilog) |
 
 ```bash
 git clone https://github.com/zesun33/hw-agent-tooling.git
 git clone https://github.com/zesun33/eda-docker-images.git
 git clone https://github.com/zesun33/eda-devcontainer.git
+git clone https://github.com/zesun33/mcp-verilog.git
 ```
 
 > **Note:** [zesun33/eda](https://github.com/zesun33/eda) is an older private monorepo and is **archived**. Prefer `eda-docker-images` and `eda-devcontainer`.
