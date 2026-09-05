@@ -22,7 +22,7 @@
 /hw-agent-skills/
 /mcp-cocotb/
 /mcp-yosys/
-# /mcp-rtl-review/
+/mcp-rtl-review/
 # /mcp-openroad/
 # /kernel-forge/
 # /agentic-asic/

@@ -29,6 +29,7 @@ MCP servers, agent skills, CLIs, and shared EDA container foundations that help 
 | [hw-agent-skills](https://github.com/zesun33/hw-agent-skills) | Portable agent skills and rubrics for hardware engineering and ML systems | [link](https://github.com/zesun33/hw-agent-skills) |
 | [mcp-cocotb](https://github.com/zesun33/mcp-cocotb) | Model Context Protocol server for Python-based Cocotb co-simulation testbenches | [link](https://github.com/zesun33/mcp-cocotb) |
 | [mcp-yosys](https://github.com/zesun33/mcp-yosys) | Model Context Protocol server for Yosys RTL synthesis, cell statistics, and latch triage | [link](https://github.com/zesun33/mcp-yosys) |
+| [mcp-rtl-review](https://github.com/zesun33/mcp-rtl-review) | Model Context Protocol server for AST-backed static RTL review, semantic bug detection, and code review scoring | [link](https://github.com/zesun33/mcp-rtl-review) |
 
 ```bash
 git clone https://github.com/zesun33/hw-agent-tooling.git
@@ -38,6 +39,7 @@ git clone https://github.com/zesun33/mcp-verilog.git
 git clone https://github.com/zesun33/hw-agent-skills.git
 git clone https://github.com/zesun33/mcp-cocotb.git
 git clone https://github.com/zesun33/mcp-yosys.git
+git clone https://github.com/zesun33/mcp-rtl-review.git
 ```
 
 > **Note:** [zesun33/eda](https://github.com/zesun33/eda) is an older private monorepo and is **archived**. Prefer `eda-docker-images` and `eda-devcontainer`.

@@ -51,6 +51,10 @@
     {
       "name": "mcp-yosys",
       "path": "mcp-yosys"
+    },
+    {
+      "name": "mcp-rtl-review",
+      "path": "mcp-rtl-review"
     }
   ],
   "settings": {
@@ -67,7 +71,8 @@
       "mcp-verilog": true,
       "hw-agent-skills": true,
       "mcp-cocotb": true,
-      "mcp-yosys": true
+      "mcp-yosys": true,
+      "mcp-rtl-review": true
     },
     "files.associations": {
       "*.cu": "cpp",
