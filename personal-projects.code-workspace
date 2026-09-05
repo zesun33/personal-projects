@@ -39,6 +39,10 @@
     {
       "name": "mcp-verilog",
       "path": "mcp-verilog"
+    },
+    {
+      "name": "hw-agent-skills",
+      "path": "hw-agent-skills"
     }
   ],
   "settings": {
@@ -52,7 +56,8 @@
       "parallel-computing-lab": true,
       "resnet-tensorrt-bench": true,
       "triton-flash-attention-lite": true,
-      "mcp-verilog": true
+      "mcp-verilog": true,
+      "hw-agent-skills": true
     },
     "files.associations": {
       "*.cu": "cpp",
