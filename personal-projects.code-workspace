@@ -43,6 +43,10 @@
     {
       "name": "hw-agent-skills",
       "path": "hw-agent-skills"
+    },
+    {
+      "name": "mcp-cocotb",
+      "path": "mcp-cocotb"
     }
   ],
   "settings": {
@@ -57,7 +61,8 @@
       "resnet-tensorrt-bench": true,
       "triton-flash-attention-lite": true,
       "mcp-verilog": true,
-      "hw-agent-skills": true
+      "hw-agent-skills": true,
+      "mcp-cocotb": true
     },
     "files.associations": {
       "*.cu": "cpp",
