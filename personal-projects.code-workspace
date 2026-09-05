@@ -55,6 +55,10 @@
     {
       "name": "mcp-rtl-review",
       "path": "mcp-rtl-review"
+    },
+    {
+      "name": "mcp-openroad",
+      "path": "mcp-openroad"
     }
   ],
   "settings": {
@@ -72,7 +76,8 @@
       "hw-agent-skills": true,
       "mcp-cocotb": true,
       "mcp-yosys": true,
-      "mcp-rtl-review": true
+      "mcp-rtl-review": true,
+      "mcp-openroad": true
     },
     "files.associations": {
       "*.cu": "cpp",
