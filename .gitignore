@@ -21,7 +21,7 @@
 /mcp-verilog/
 /hw-agent-skills/
 /mcp-cocotb/
-# /mcp-yosys/
+/mcp-yosys/
 # /mcp-rtl-review/
 # /mcp-openroad/
 # /kernel-forge/

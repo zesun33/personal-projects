@@ -47,6 +47,10 @@
     {
       "name": "mcp-cocotb",
       "path": "mcp-cocotb"
+    },
+    {
+      "name": "mcp-yosys",
+      "path": "mcp-yosys"
     }
   ],
   "settings": {
@@ -62,7 +66,8 @@
       "triton-flash-attention-lite": true,
       "mcp-verilog": true,
       "hw-agent-skills": true,
-      "mcp-cocotb": true
+      "mcp-cocotb": true,
+      "mcp-yosys": true
     },
     "files.associations": {
       "*.cu": "cpp",
