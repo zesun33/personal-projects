@@ -31,6 +31,7 @@ MCP servers, agent skills, CLIs, and shared EDA container foundations that help 
 | [mcp-yosys](https://github.com/zesun33/mcp-yosys) | Model Context Protocol server for Yosys RTL synthesis, cell statistics, and latch triage | [link](https://github.com/zesun33/mcp-yosys) |
 | [mcp-rtl-review](https://github.com/zesun33/mcp-rtl-review) | Model Context Protocol server for AST-backed static RTL review, semantic bug detection, and code review scoring | [link](https://github.com/zesun33/mcp-rtl-review) |
 | [mcp-openroad](https://github.com/zesun33/mcp-openroad) | Model Context Protocol server for OpenROAD physical design, floorplanning, placement, routing, and STA | [link](https://github.com/zesun33/mcp-openroad) |
+| [kernel-forge](https://github.com/zesun33/kernel-forge) | Flagship developer CLI and Roofline benchmark runtime for GPU kernel engineering (CUDA & Triton) | [link](https://github.com/zesun33/kernel-forge) |
 
 ```bash
 git clone https://github.com/zesun33/hw-agent-tooling.git
@@ -42,6 +43,7 @@ git clone https://github.com/zesun33/mcp-cocotb.git
 git clone https://github.com/zesun33/mcp-yosys.git
 git clone https://github.com/zesun33/mcp-rtl-review.git
 git clone https://github.com/zesun33/mcp-openroad.git
+git clone https://github.com/zesun33/kernel-forge.git
 ```
 
 > **Note:** [zesun33/eda](https://github.com/zesun33/eda) is an older private monorepo and is **archived**. Prefer `eda-docker-images` and `eda-devcontainer`.

@@ -59,6 +59,10 @@
     {
       "name": "mcp-openroad",
       "path": "mcp-openroad"
+    },
+    {
+      "name": "kernel-forge",
+      "path": "kernel-forge"
     }
   ],
   "settings": {
@@ -77,7 +81,8 @@
       "mcp-cocotb": true,
       "mcp-yosys": true,
       "mcp-rtl-review": true,
-      "mcp-openroad": true
+      "mcp-openroad": true,
+      "kernel-forge": true
     },
     "files.associations": {
       "*.cu": "cpp",
