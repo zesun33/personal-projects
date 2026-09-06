@@ -17,6 +17,8 @@ declare -a REPOS=(
   "mcp-openroad:OpenROAD P&R Layer:./scripts/verify.sh"
   "kernel-forge:GPU Kernel Engine:./scripts/verify.sh"
   "agentic-asic:Autonomous ASIC Flow:./scripts/verify.sh"
+  "hw-verification-suite:Centralized VIP:./scripts/verify.sh"
+  "lif-spiking-core:SNN Tapeout Mesh:./scripts/verify.sh"
 )
 
 declare -a RESULTS=()
@@ -49,7 +51,7 @@ done
 # Native CUDA / C++ Build Smoke
 printf "\033[1m[cuda-gemm-optimization]\033[0m Running sm_86 build & verify...\n"
 START_TS=$(date +%s%N)
-if (cd "${ROOT_DIR}/cuda-gemm-optimization" && make clean && make all && CUDA_VISIBLE_DEVICES=4 ./build/01_naive_gemm 512 512 512 && make clean) > /tmp/verify_gemm.log 2>&1; then
+if (cd "${ROOT_DIR}/cuda-gemm-optimization" && make clean && make all && CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-4}" ./build/01_naive_gemm 512 512 512 && make clean) > /tmp/verify_gemm.log 2>&1; then
   END_TS=$(date +%s%N)
   DURATION=$(awk "BEGIN {printf \"%.2f\", (${END_TS} - ${START_TS}) / 1000000000}")
   RESULTS+=("cuda-gemm-optimization|CUDA sm_86 GEMM|${DURATION}s|PASS")
