@@ -74,6 +74,26 @@ git clone https://github.com/zesun33/triton-flash-attention-lite.git
 
 ---
 
+## Family 3 — Neuromorphic & Hardware Accelerator Silicon Designs
+
+Synthesizable ASIC and FPGA cores for event-driven neuromorphic processing, compute-in-memory (CIM), and matrix accelerators.
+
+| Repo | Description | Status | Verification & Tapeout |
+|------|-------------|:---:|------------------------|
+| [lif-spiking-core](https://github.com/zesun33/lif-spiking-core) | Synthesizable 8x8 LIF Spiking Core Tile with CIM accumulation and SRAM config | ✅ Shipped | 9/9 Cocotb/PyUVM Tests PASS · Nangate45 Tapeout Closed (211 MHz, +5.27ns slack) |
+| [cim-bit-serial-pe](https://github.com/zesun33/cim-bit-serial-pe) | Bit-serial compute-in-memory processing element with precision scalability | 🚧 In Progress | Option 1B Architecture |
+| [neuro-cim-tile](https://github.com/zesun33/neuro-cim-tile) | Neuromorphic mixed-signal / digital CIM macro with multi-bit synaptic crossbar | 🚧 In Progress | Option 1B Architecture |
+| [tiny-tpu-systolic-array](https://github.com/zesun33/tiny-tpu-systolic-array) | Matrix multiplication systolic array engine with double-buffered weight stationary dataflow | 🚧 In Progress | Option 1B Architecture |
+
+```bash
+git clone https://github.com/zesun33/lif-spiking-core.git
+git clone https://github.com/zesun33/cim-bit-serial-pe.git
+git clone https://github.com/zesun33/neuro-cim-tile.git
+git clone https://github.com/zesun33/tiny-tpu-systolic-array.git
+```
+
+---
+
 ## Layout
 
 Locally, sibling repos live under this directory (each with its own `.git`). The parent ignores those directories so they are not nested gitlinks. See [hw-agent-tooling](https://github.com/zesun33/hw-agent-tooling) for the agent-tooling roadmap and [zesun33.github.io](https://zesun33.github.io) for the personal site.
