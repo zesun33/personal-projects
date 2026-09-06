@@ -27,6 +27,13 @@
 /kernel-forge/
 /agentic-asic/
 
+# Silicon & NeuroAI Hardware Projects
+/lif-spiking-core/
+/cim-bit-serial-pe/
+/tiny-tpu-systolic-array/
+/neuro-cim-tile/
+/hw-verification-suite/
+
 # OS / editor
 .DS_Store
 Thumbs.db

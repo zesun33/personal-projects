@@ -81,13 +81,15 @@ Synthesizable ASIC and FPGA cores for event-driven neuromorphic processing, comp
 
 | Repo | Description | Status | Verification & Tapeout |
 |------|-------------|:---:|------------------------|
-| [lif-spiking-core](https://github.com/zesun33/lif-spiking-core) | Synthesizable 8x8 LIF Spiking Core Tile, 5-port AER Router, and 4-Core 2D Mesh SoC | ✅ Shipped | 18/18 Tests PASS · 2D Mesh SoC + Router (465 MHz) · Nangate45 Tapeout Closed |
+| [lif-spiking-core](https://github.com/zesun33/lif-spiking-core) | Synthesizable 8x8 LIF Spiking Core Tile, 5-port AER Router, and 4-Core 2D Mesh SoC | ✅ Shipped | 19/19 Tests PASS · 2D Mesh SoC + Router (465 MHz) · Nangate45 Tapeout Closed |
+| [hw-verification-suite](https://github.com/zesun33/hw-verification-suite) | Centralized PyUVM and Cocotb VIP Verification Suite for Neuromorphic & Accelerators | ✅ Shipped | 4/4 Unit Tests PASS · Reusable AER & LIF VIP · CI Automated |
 | [cim-bit-serial-pe](https://github.com/zesun33/cim-bit-serial-pe) | Bit-serial compute-in-memory processing element with precision scalability | 🚧 In Progress | Option 1B Architecture |
 | [neuro-cim-tile](https://github.com/zesun33/neuro-cim-tile) | Neuromorphic mixed-signal / digital CIM macro with multi-bit synaptic crossbar | 🚧 In Progress | Option 1B Architecture |
 | [tiny-tpu-systolic-array](https://github.com/zesun33/tiny-tpu-systolic-array) | Matrix multiplication systolic array engine with double-buffered weight stationary dataflow | 🚧 In Progress | Option 1B Architecture |
 
 ```bash
 git clone https://github.com/zesun33/lif-spiking-core.git
+git clone https://github.com/zesun33/hw-verification-suite.git
 git clone https://github.com/zesun33/cim-bit-serial-pe.git
 git clone https://github.com/zesun33/neuro-cim-tile.git
 git clone https://github.com/zesun33/tiny-tpu-systolic-array.git
