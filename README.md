@@ -27,6 +27,7 @@ MCP servers, agent skills, CLIs, and shared EDA container foundations that help 
 | [eda-devcontainer](https://github.com/zesun33/eda-devcontainer) | VS Code / Cursor Dev Container profiles on those images | [link](https://github.com/zesun33/eda-devcontainer) |
 | [mcp-verilog](https://github.com/zesun33/mcp-verilog) | Model Context Protocol server for Verilog/SystemVerilog linting, compilation, and simulation | [link](https://github.com/zesun33/mcp-verilog) |
 | [hw-agent-skills](https://github.com/zesun33/hw-agent-skills) | Portable agent skills and rubrics for hardware engineering and ML systems | [link](https://github.com/zesun33/hw-agent-skills) |
+| [hw-verification-suite](https://github.com/zesun33/hw-verification-suite) | Centralized IEEE 1800.2 PyUVM & Cocotb Verification IP (VIP) Suite for Neuromorphic & Accelerators | [link](https://github.com/zesun33/hw-verification-suite) |
 | [mcp-cocotb](https://github.com/zesun33/mcp-cocotb) | Model Context Protocol server for Python-based Cocotb co-simulation testbenches | [link](https://github.com/zesun33/mcp-cocotb) |
 | [mcp-yosys](https://github.com/zesun33/mcp-yosys) | Model Context Protocol server for Yosys RTL synthesis, cell statistics, and latch triage | [link](https://github.com/zesun33/mcp-yosys) |
 | [mcp-rtl-review](https://github.com/zesun33/mcp-rtl-review) | Model Context Protocol server for AST-backed static RTL review, semantic bug detection, and code review scoring | [link](https://github.com/zesun33/mcp-rtl-review) |
@@ -80,7 +81,7 @@ Synthesizable ASIC and FPGA cores for event-driven neuromorphic processing, comp
 
 | Repo | Description | Status | Verification & Tapeout |
 |------|-------------|:---:|------------------------|
-| [lif-spiking-core](https://github.com/zesun33/lif-spiking-core) | Synthesizable 8x8 LIF Spiking Core Tile with CIM accumulation and SRAM config | ✅ Shipped | 9/9 Cocotb/PyUVM Tests PASS · Nangate45 Tapeout Closed (211 MHz, +5.27ns slack) |
+| [lif-spiking-core](https://github.com/zesun33/lif-spiking-core) | Synthesizable 8x8 LIF Spiking Core Tile, 5-port AER Router, and 4-Core 2D Mesh SoC | ✅ Shipped | 18/18 Tests PASS · 2D Mesh SoC + Router (465 MHz) · Nangate45 Tapeout Closed |
 | [cim-bit-serial-pe](https://github.com/zesun33/cim-bit-serial-pe) | Bit-serial compute-in-memory processing element with precision scalability | 🚧 In Progress | Option 1B Architecture |
 | [neuro-cim-tile](https://github.com/zesun33/neuro-cim-tile) | Neuromorphic mixed-signal / digital CIM macro with multi-bit synaptic crossbar | 🚧 In Progress | Option 1B Architecture |
 | [tiny-tpu-systolic-array](https://github.com/zesun33/tiny-tpu-systolic-array) | Matrix multiplication systolic array engine with double-buffered weight stationary dataflow | 🚧 In Progress | Option 1B Architecture |
