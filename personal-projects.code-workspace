@@ -63,6 +63,10 @@
     {
       "name": "kernel-forge",
       "path": "kernel-forge"
+    },
+    {
+      "name": "agentic-asic",
+      "path": "agentic-asic"
     }
   ],
   "settings": {
@@ -82,7 +86,8 @@
       "mcp-yosys": true,
       "mcp-rtl-review": true,
       "mcp-openroad": true,
-      "kernel-forge": true
+      "kernel-forge": true,
+      "agentic-asic": true
     },
     "files.associations": {
       "*.cu": "cpp",
