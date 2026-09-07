@@ -22,6 +22,8 @@
 /mcp-gds/
 /mcp-formal/
 /mcp-fpga/
+/mcp-spice/
+/hw-agent-scaffold/
 /hw-agent-skills/
 /mcp-cocotb/
 /mcp-yosys/

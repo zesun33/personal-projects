@@ -35,6 +35,8 @@ MCP servers, agent skills, CLIs, and shared EDA container foundations that help 
 | [mcp-gds](https://github.com/zesun33/mcp-gds) | MCP server for GDS stream-out, KLayout DRC, Magic extract, and Netgen LVS | [link](https://github.com/zesun33/mcp-gds) |
 | [mcp-formal](https://github.com/zesun33/mcp-formal) | MCP server for SymbiYosys formal prove / SVA lint | [link](https://github.com/zesun33/mcp-formal) |
 | [mcp-fpga](https://github.com/zesun33/mcp-fpga) | MCP server for Yosys + nextpnr FPGA synth / P&R / bitstream | [link](https://github.com/zesun33/mcp-fpga) |
+| [mcp-spice](https://github.com/zesun33/mcp-spice) | MCP server for ngspice batch circuit simulation | [link](https://github.com/zesun33/mcp-spice) |
+| [hw-agent-scaffold](https://github.com/zesun33/hw-agent-scaffold) | One-step `npx @zesun33/create-hw-agent` installer | [link](https://github.com/zesun33/hw-agent-scaffold) |
 | [gh-actions-for-hw](https://github.com/zesun33/gh-actions-for-hw) | Reusable GitHub Actions composites on GHCR EDA images | [link](https://github.com/zesun33/gh-actions-for-hw) |
 | [kernel-forge](https://github.com/zesun33/kernel-forge) | Flagship developer CLI and Roofline benchmark runtime for GPU kernel engineering (CUDA & Triton) | [link](https://github.com/zesun33/kernel-forge) |
 | [agentic-asic](https://github.com/zesun33/agentic-asic) | Autonomous silicon compilation and signoff orchestrator powered by EDA MCP servers | [link](https://github.com/zesun33/agentic-asic) |
@@ -52,6 +54,8 @@ git clone https://github.com/zesun33/mcp-openroad.git
 git clone https://github.com/zesun33/mcp-gds.git
 git clone https://github.com/zesun33/mcp-formal.git
 git clone https://github.com/zesun33/mcp-fpga.git
+git clone https://github.com/zesun33/mcp-spice.git
+git clone https://github.com/zesun33/hw-agent-scaffold.git
 git clone https://github.com/zesun33/gh-actions-for-hw.git
 git clone https://github.com/zesun33/kernel-forge.git
 git clone https://github.com/zesun33/agentic-asic.git

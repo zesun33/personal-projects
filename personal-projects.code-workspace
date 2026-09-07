@@ -73,6 +73,14 @@
       "path": "mcp-fpga"
     },
     {
+      "name": "mcp-spice",
+      "path": "mcp-spice"
+    },
+    {
+      "name": "hw-agent-scaffold",
+      "path": "hw-agent-scaffold"
+    },
+    {
       "name": "gh-actions-for-hw",
       "path": "gh-actions-for-hw"
     },
@@ -125,6 +133,8 @@
       "mcp-gds": true,
       "mcp-formal": true,
       "mcp-fpga": true,
+      "mcp-spice": true,
+      "hw-agent-scaffold": true,
       "gh-actions-for-hw": true,
       "kernel-forge": true,
       "agentic-asic": true,
