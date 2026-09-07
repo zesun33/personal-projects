@@ -17,7 +17,7 @@
 /hw-agent-tooling/
 /eda-docker-images/
 /eda-devcontainer/
-# /gh-actions-for-hw/
+/gh-actions-for-hw/
 /mcp-verilog/
 /mcp-gds/
 /mcp-formal/
