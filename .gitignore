@@ -19,6 +19,9 @@
 /eda-devcontainer/
 # /gh-actions-for-hw/
 /mcp-verilog/
+/mcp-gds/
+/mcp-formal/
+/mcp-fpga/
 /hw-agent-skills/
 /mcp-cocotb/
 /mcp-yosys/
@@ -44,3 +47,13 @@ Thumbs.db
 .vscode/
 .cursor/
 *.iml
+
+# Agent memory / local progress tracking (never commit)
+MEMORY.md
+MEMORY.local.md
+.memory/
+*.memory.md
+progress.local.md
+.todo.local.md
+transcripts.local/
+*.local.log
