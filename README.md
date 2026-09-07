@@ -31,7 +31,11 @@ MCP servers, agent skills, CLIs, and shared EDA container foundations that help 
 | [mcp-cocotb](https://github.com/zesun33/mcp-cocotb) | Model Context Protocol server for Python-based Cocotb co-simulation testbenches | [link](https://github.com/zesun33/mcp-cocotb) |
 | [mcp-yosys](https://github.com/zesun33/mcp-yosys) | Model Context Protocol server for Yosys RTL synthesis, cell statistics, and latch triage | [link](https://github.com/zesun33/mcp-yosys) |
 | [mcp-rtl-review](https://github.com/zesun33/mcp-rtl-review) | Model Context Protocol server for AST-backed static RTL review, semantic bug detection, and code review scoring | [link](https://github.com/zesun33/mcp-rtl-review) |
-| [mcp-openroad](https://github.com/zesun33/mcp-openroad) | Model Context Protocol server for OpenROAD physical design, floorplanning, placement, routing, and STA | [link](https://github.com/zesun33/mcp-openroad) |
+| [mcp-openroad](https://github.com/zesun33/mcp-openroad) | Model Context Protocol server for OpenROAD physical design (floorplan, CTS, PDN, route, STA; Nangate45 + Sky130) | [link](https://github.com/zesun33/mcp-openroad) |
+| [mcp-gds](https://github.com/zesun33/mcp-gds) | MCP server for GDS stream-out, KLayout DRC, Magic extract, and Netgen LVS | [link](https://github.com/zesun33/mcp-gds) |
+| [mcp-formal](https://github.com/zesun33/mcp-formal) | MCP server for SymbiYosys formal prove / SVA lint | [link](https://github.com/zesun33/mcp-formal) |
+| [mcp-fpga](https://github.com/zesun33/mcp-fpga) | MCP server for Yosys + nextpnr FPGA synth / P&R / bitstream | [link](https://github.com/zesun33/mcp-fpga) |
+| [gh-actions-for-hw](https://github.com/zesun33/gh-actions-for-hw) | Reusable GitHub Actions composites on GHCR EDA images | [link](https://github.com/zesun33/gh-actions-for-hw) |
 | [kernel-forge](https://github.com/zesun33/kernel-forge) | Flagship developer CLI and Roofline benchmark runtime for GPU kernel engineering (CUDA & Triton) | [link](https://github.com/zesun33/kernel-forge) |
 | [agentic-asic](https://github.com/zesun33/agentic-asic) | Autonomous silicon compilation and signoff orchestrator powered by EDA MCP servers | [link](https://github.com/zesun33/agentic-asic) |
 
@@ -45,10 +49,15 @@ git clone https://github.com/zesun33/mcp-cocotb.git
 git clone https://github.com/zesun33/mcp-yosys.git
 git clone https://github.com/zesun33/mcp-rtl-review.git
 git clone https://github.com/zesun33/mcp-openroad.git
+git clone https://github.com/zesun33/mcp-gds.git
+git clone https://github.com/zesun33/mcp-formal.git
+git clone https://github.com/zesun33/mcp-fpga.git
+git clone https://github.com/zesun33/gh-actions-for-hw.git
 git clone https://github.com/zesun33/kernel-forge.git
 git clone https://github.com/zesun33/agentic-asic.git
 ```
 
+Images for the MCP servers are public on GHCR (`podman pull ghcr.io/zesun33/{verilog,asic,fpga,spice}:latest`). See each server README **Execution Runtime** section.
 > **Note:** [zesun33/eda](https://github.com/zesun33/eda) is an older private monorepo and is **archived**. Prefer `eda-docker-images` and `eda-devcontainer`.
 
 ---

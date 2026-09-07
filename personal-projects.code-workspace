@@ -61,12 +61,48 @@
       "path": "mcp-openroad"
     },
     {
+      "name": "mcp-gds",
+      "path": "mcp-gds"
+    },
+    {
+      "name": "mcp-formal",
+      "path": "mcp-formal"
+    },
+    {
+      "name": "mcp-fpga",
+      "path": "mcp-fpga"
+    },
+    {
+      "name": "gh-actions-for-hw",
+      "path": "gh-actions-for-hw"
+    },
+    {
       "name": "kernel-forge",
       "path": "kernel-forge"
     },
     {
       "name": "agentic-asic",
       "path": "agentic-asic"
+    },
+    {
+      "name": "hw-verification-suite",
+      "path": "hw-verification-suite"
+    },
+    {
+      "name": "lif-spiking-core",
+      "path": "lif-spiking-core"
+    },
+    {
+      "name": "cim-bit-serial-pe",
+      "path": "cim-bit-serial-pe"
+    },
+    {
+      "name": "neuro-cim-tile",
+      "path": "neuro-cim-tile"
+    },
+    {
+      "name": "tiny-tpu-systolic-array",
+      "path": "tiny-tpu-systolic-array"
     }
   ],
   "settings": {
@@ -86,8 +122,17 @@
       "mcp-yosys": true,
       "mcp-rtl-review": true,
       "mcp-openroad": true,
+      "mcp-gds": true,
+      "mcp-formal": true,
+      "mcp-fpga": true,
+      "gh-actions-for-hw": true,
       "kernel-forge": true,
-      "agentic-asic": true
+      "agentic-asic": true,
+      "hw-verification-suite": true,
+      "lif-spiking-core": true,
+      "cim-bit-serial-pe": true,
+      "neuro-cim-tile": true,
+      "tiny-tpu-systolic-array": true
     },
     "files.associations": {
       "*.cu": "cpp",
