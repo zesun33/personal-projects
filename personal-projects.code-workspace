@@ -111,6 +111,10 @@
     {
       "name": "tiny-tpu-systolic-array",
       "path": "tiny-tpu-systolic-array"
+    },
+    {
+      "name": "rust-systems-track",
+      "path": "rust-systems-track"
     }
   ],
   "settings": {
@@ -142,7 +146,8 @@
       "lif-spiking-core": true,
       "cim-bit-serial-pe": true,
       "neuro-cim-tile": true,
-      "tiny-tpu-systolic-array": true
+      "tiny-tpu-systolic-array": true,
+      "rust-systems-track": true
     },
     "files.associations": {
       "*.cu": "cpp",
@@ -183,7 +188,9 @@
       "DavidAnson.vscode-markdownlint",
       "tamasfe.even-better-toml",
       "ms-vscode.cpptools",
-      "NVIDIA.nsight-vscode-edition"
+      "NVIDIA.nsight-vscode-edition",
+      "rust-lang.rust-analyzer",
+      "vadimcn.vscode-lldb"
     ]
   }
 }

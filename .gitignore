@@ -39,6 +39,11 @@
 /neuro-cim-tile/
 /hw-verification-suite/
 
+# Rust systems track — phase dirs become standalone repos (meta keeps PLAN/TRACKER/resources)
+/rust-systems-track/00-basics/
+/rust-systems-track/01-systems-bridge/
+/rust-systems-track/02-domain-lif-golden/
+
 # OS / editor
 .DS_Store
 Thumbs.db

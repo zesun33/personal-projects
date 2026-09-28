@@ -110,6 +110,22 @@ git clone https://github.com/zesun33/tiny-tpu-systolic-array.git
 
 ---
 
+## Family 4 — Rust systems
+
+Track catalog (curriculum + living progress): [rust-systems-track](rust-systems-track/README.md) · [PLAN](rust-systems-track/PLAN.md) · [TRACKER](rust-systems-track/TRACKER.md)
+
+Path: private basics → one public quantized GEMM bridge (`rust-quant-gemm`) → public LIF golden model (`lif-rust-golden`) co-checked against `lif-spiking-core`. Phase 0 is **never** listed here as a showcase.
+
+| Repo | Description | Status |
+|------|-------------|:---:|
+| *(Phase 0 basics)* | Private learning only — not showcased | private |
+| `rust-quant-gemm` | CPU quantized GEMM + benches / proptest | 🚧 After Phase 0 |
+| `lif-rust-golden` | Rust LIF/AER golden vs `lif-spiking-core` RTL | 🚧 After Phase 1 |
+
+Public clone lines and workspace folders are added when each phase repo is published.
+
+---
+
 ## Layout
 
 Locally, sibling repos live under this directory (each with its own `.git`). The parent ignores those directories so they are not nested gitlinks. See [hw-agent-tooling](https://github.com/zesun33/hw-agent-tooling) for the agent-tooling roadmap and [zesun33.github.io](https://zesun33.github.io) for the personal site.
