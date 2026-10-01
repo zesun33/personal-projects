@@ -52,7 +52,7 @@ The runner reads verification commands from the catalog and reports uncovered pr
 python3 scripts/check_npm.py
 ```
 
-Full EDA/GPU tests have runtime prerequisites. The RTL-review backend fix and pending npm release are recorded in [`SYNC.md`](SYNC.md#rtl-review-runtime-compatibility-fixed-in-github-source-on-2026-10-01).
+Full EDA/GPU tests have runtime prerequisites. The RTL-review backend fix and published npm release are recorded in [`SYNC.md`](SYNC.md#rtl-review-runtime-compatibility-released-as-022-on-2026-10-01).
 
 <!-- BEGIN GENERATED PROJECT CATALOG -->
 

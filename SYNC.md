@@ -60,11 +60,17 @@ The compatibility shell script reads commands from `projects.json`. No GPU index
 
 EDA suites can require container images, installed Python packages, and a PDK; container builds and hardware-dependent tests can take time. See each repository's verification script for its actual prerequisites.
 
-### RTL-review runtime compatibility (fixed in GitHub source on 2026-10-01)
+### RTL-review runtime compatibility (released as 0.2.2 on 2026-10-01)
 
 The `mcp-rtl-review` checkout now uses Verilator's JSON AST when supported and falls back to XML on older toolchains. All 12 integration tests pass with the available Verilator 5.050 and 5.020 images. Missing/malformed ASTs and compiler failures return failed audits; they cannot produce a clean review. The complete test suite passes 43/43 without skips.
 
-The published npm package `@zesun33/mcp-rtl-review@0.2.1` still has the earlier XML-only backend. The fixed 0.2.2 release candidate is prepared, but publishing requires npm authentication (the registry returned 401 during this work). Until release, use the pulled source:
+The fixed package `@zesun33/mcp-rtl-review@0.2.2` is published to npm and selected by the `latest` tag. Its registry integrity matches the tested release tarball. To select the fixed release explicitly, set the MCP client's command to `npx` with arguments `-y` and `@zesun33/mcp-rtl-review@0.2.2`:
+
+```bash
+npx -y @zesun33/mcp-rtl-review@0.2.2
+```
+
+Version `0.2.1` retains the earlier XML-only backend. Update clients pinned to that version and restart the MCP server. A Git pull updates source independently of the npx package. To run the pulled source directly:
 
 ```bash
 cd mcp-rtl-review
@@ -72,7 +78,7 @@ npm ci
 npm run build
 ```
 
-Point the MCP client's command at `node`, with `/path/to/mcp-rtl-review/dist/index.js` as its argument. An ordinary npx invocation runs the published npm code, so a Git pull alone does not change that command's behavior.
+Point the MCP client's command at `node`, with `/path/to/mcp-rtl-review/dist/index.js` as its argument.
 
 ## Updating organization
 
