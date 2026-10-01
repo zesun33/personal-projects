@@ -60,9 +60,19 @@ The compatibility shell script reads commands from `projects.json`. No GPU index
 
 EDA suites can require container images, installed Python packages, and a PDK; container builds and hardware-dependent tests can take time. See each repository's verification script for its actual prerequisites.
 
-### Known runtime incompatibility observed on 2026-10-01
+### RTL-review runtime compatibility (fixed in GitHub source on 2026-10-01)
 
-The available `ghcr.io/zesun33/verilog` image contains Verilator 5.050. `mcp-rtl-review` still requests `--xml-only`, which that version rejects. Its full local suite has six integration failures; passing unit tests and npm startup do not establish working AST review. Supporting the new Verilator AST format is separate functional work. Use a separately verified XML-capable image for that server, or repair the AST backend before treating it as verified. Do not downgrade the shared image without checking cocotb compatibility.
+The `mcp-rtl-review` checkout now uses Verilator's JSON AST when supported and falls back to XML on older toolchains. All 12 integration tests pass with the available Verilator 5.050 and 5.020 images. Missing/malformed ASTs and compiler failures return failed audits; they cannot produce a clean review. The complete test suite passes 43/43 without skips.
+
+The published npm package `@zesun33/mcp-rtl-review@0.2.1` still has the earlier XML-only backend. The fixed 0.2.2 release candidate is prepared, but publishing requires npm authentication (the registry returned 401 during this work). Until release, use the pulled source:
+
+```bash
+cd mcp-rtl-review
+npm ci
+npm run build
+```
+
+Point the MCP client's command at `node`, with `/path/to/mcp-rtl-review/dist/index.js` as its argument. An ordinary npx invocation runs the published npm code, so a Git pull alone does not change that command's behavior.
 
 ## Updating organization
 
