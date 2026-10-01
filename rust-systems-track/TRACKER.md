@@ -10,8 +10,8 @@
 
 ## Last session
 
-- **Date:** 2026-09-14
-- **Done:** Downloaded official Rust Book (`00-basics/book/` clone) and built offline HTML (`00-basics/book-html/` via mdbook). See `00-basics/BOOK.md`.
+- **Date:** 2026-10-01
+- **Done:** Reviewed the Rust plan during portfolio organization; added a focused workspace and cross-machine catalog support. No learning milestones completed. The offline Book setup from 2026-09-14 remains documented in `00-basics/BOOK.md`.
 - **Blockers:** none
 
 ## Next action

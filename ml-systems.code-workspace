@@ -5,78 +5,6 @@
       "path": "."
     },
     {
-      "name": "hw-agent-tooling",
-      "path": "hw-agent-tooling"
-    },
-    {
-      "name": "eda-docker-images",
-      "path": "eda-docker-images"
-    },
-    {
-      "name": "eda-devcontainer",
-      "path": "eda-devcontainer"
-    },
-    {
-      "name": "mcp-verilog",
-      "path": "mcp-verilog"
-    },
-    {
-      "name": "hw-agent-skills",
-      "path": "hw-agent-skills"
-    },
-    {
-      "name": "hw-verification-suite",
-      "path": "hw-verification-suite"
-    },
-    {
-      "name": "mcp-cocotb",
-      "path": "mcp-cocotb"
-    },
-    {
-      "name": "mcp-yosys",
-      "path": "mcp-yosys"
-    },
-    {
-      "name": "mcp-rtl-review",
-      "path": "mcp-rtl-review"
-    },
-    {
-      "name": "mcp-openroad",
-      "path": "mcp-openroad"
-    },
-    {
-      "name": "mcp-gds",
-      "path": "mcp-gds"
-    },
-    {
-      "name": "mcp-formal",
-      "path": "mcp-formal"
-    },
-    {
-      "name": "mcp-fpga",
-      "path": "mcp-fpga"
-    },
-    {
-      "name": "mcp-spice",
-      "path": "mcp-spice"
-    },
-    {
-      "name": "hw-agent-scaffold",
-      "path": "hw-agent-scaffold"
-    },
-    {
-      "name": "gh-actions-for-hw",
-      "path": "gh-actions-for-hw"
-    },
-    {
-      "name": "kernel-forge",
-      "path": "kernel-forge"
-    },
-    {
-      "name": "agentic-asic",
-      "path": "agentic-asic"
-    },
-    {
       "name": "cuda-gemm-optimization",
       "path": "cuda-gemm-optimization"
     },
@@ -97,24 +25,8 @@
       "path": "triton-flash-attention-lite"
     },
     {
-      "name": "lif-spiking-core",
-      "path": "lif-spiking-core"
-    },
-    {
-      "name": "cim-bit-serial-pe",
-      "path": "cim-bit-serial-pe"
-    },
-    {
-      "name": "neuro-cim-tile",
-      "path": "neuro-cim-tile"
-    },
-    {
-      "name": "tiny-tpu-systolic-array",
-      "path": "tiny-tpu-systolic-array"
-    },
-    {
-      "name": "rust-systems-track",
-      "path": "rust-systems-track"
+      "name": "kernel-forge",
+      "path": "kernel-forge"
     }
   ],
   "settings": {

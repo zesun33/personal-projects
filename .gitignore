@@ -4,40 +4,37 @@
 # Locally they live as sub-directories here but keep their own git
 # history, so the parent must ignore them.
 #
-# Uncomment a line when you scaffold that standalone repo locally.
+# Edit projects.json and regenerate the marked checkout section below.
 
-# ML systems practice
-/cuda-gemm-optimization/
-/cuda-memory-benchmark/
-/parallel-computing-lab/
-/resnet-tensorrt-bench/
-/triton-flash-attention-lite/
-
-# HW agent tooling
+# BEGIN GENERATED PROJECT CHECKOUTS
 /hw-agent-tooling/
 /eda-docker-images/
 /eda-devcontainer/
-/gh-actions-for-hw/
 /mcp-verilog/
+/hw-agent-skills/
+/hw-verification-suite/
+/mcp-cocotb/
+/mcp-yosys/
+/mcp-rtl-review/
+/mcp-openroad/
 /mcp-gds/
 /mcp-formal/
 /mcp-fpga/
 /mcp-spice/
 /hw-agent-scaffold/
-/hw-agent-skills/
-/mcp-cocotb/
-/mcp-yosys/
-/mcp-rtl-review/
-/mcp-openroad/
+/gh-actions-for-hw/
 /kernel-forge/
 /agentic-asic/
-
-# Silicon & NeuroAI Hardware Projects
+/cuda-gemm-optimization/
+/cuda-memory-benchmark/
+/parallel-computing-lab/
+/resnet-tensorrt-bench/
+/triton-flash-attention-lite/
 /lif-spiking-core/
 /cim-bit-serial-pe/
-/tiny-tpu-systolic-array/
 /neuro-cim-tile/
-/hw-verification-suite/
+/tiny-tpu-systolic-array/
+# END GENERATED PROJECT CHECKOUTS
 
 # Rust systems track — phase dirs become standalone repos (meta keeps PLAN/TRACKER/resources)
 /rust-systems-track/00-basics/
@@ -64,3 +61,7 @@ progress.local.md
 .todo.local.md
 transcripts.local/
 *.local.log
+
+# Python tooling caches
+__pycache__/
+*.py[cod]
