@@ -29,14 +29,14 @@ Maturity reflects the repository roadmap. It is not a fresh test result, silicon
 | [mcp-spice](mcp-spice/README.md) | shipped | `./scripts/verify.sh` | Maintain regression coverage and distribution consistency |
 | [hw-agent-scaffold](hw-agent-scaffold/README.md) | shipped | `./scripts/verify.sh` | Maintain regression coverage and distribution consistency |
 | [gh-actions-for-hw](gh-actions-for-hw/README.md) | shipped | not configured | Maintain regression coverage and distribution consistency |
-| [kernel-forge](kernel-forge/README.md) | shipped | `./scripts/verify.sh` | Maintain regression coverage and distribution consistency |
+| [kernel-forge](kernel-forge/README.md) | shipped | `./scripts/verify.sh` | Expand measured kernel cases and GPU reference coverage |
 | [agentic-asic](agentic-asic/README.md) | shipped | `./scripts/verify.sh` | Maintain regression coverage and distribution consistency |
-| [cuda-gemm-optimization](cuda-gemm-optimization/README.md) | active | `make all` → `./build/01_naive_gemm 512 512 512` | Extend the measured GEMM optimization ladder |
+| [cuda-gemm-optimization](cuda-gemm-optimization/README.md) | active | `./scripts/verify.sh` | Add register tiling and repeat the checked performance comparison |
 | [cuda-memory-benchmark](cuda-memory-benchmark/README.md) | active | not configured | Implement access-pattern and shared-memory benchmarks |
 | [parallel-computing-lab](parallel-computing-lab/README.md) | active | not configured | Implement reductions and synchronization exercises |
 | [resnet-tensorrt-bench](resnet-tensorrt-bench/README.md) | planned | not configured | Implement model export and a measured TensorRT baseline |
 | [triton-flash-attention-lite](triton-flash-attention-lite/README.md) | planned | not configured | Implement and check the first attention kernel |
-| [lif-spiking-core](lif-spiking-core/README.md) | shipped | `./scripts/verify.sh` | Maintain regression coverage and distribution consistency |
+| [lif-spiking-core](lif-spiking-core/README.md) | shipped | `./scripts/verify.sh` | Capture versioned timing reports and tool manifests for implementation results |
 | [cim-bit-serial-pe](cim-bit-serial-pe/README.md) | active | not configured | Complete self-checking precision and zero-skipping regression |
 | [neuro-cim-tile](neuro-cim-tile/README.md) | active | not configured | Complete digital-periphery and device-model checks |
 | [tiny-tpu-systolic-array](tiny-tpu-systolic-array/README.md) | active | not configured | Complete GEMM/dataflow regression |

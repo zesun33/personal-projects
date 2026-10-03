@@ -26,6 +26,8 @@ python3 scripts/check_catalog.py --network
 
 Use `--catalog-only` for a fresh parent clone or CI without child checkouts. See [`STATUS.md`](STATUS.md) for maturity/next milestones, [`DEPENDENCIES.md`](DEPENDENCIES.md) for project relationships, and [`SYNC.md`](SYNC.md) for the cross-machine workflow.
 
+See [`UPGRADES.md`](UPGRADES.md) for portable GPU selection, measured GEMM comparisons, hardware evidence definitions, and npm release automation.
+
 Each project keeps a separate GitHub repository and Git history. After pulling the parent on another machine, clone/pull the child repositories separately:
 
 ```bash
@@ -83,7 +85,7 @@ Full EDA/GPU tests have runtime prerequisites. The RTL-review backend fix and pu
 
 | Project | Purpose | Maturity | Distribution |
 |---|---|---|---|
-| [cuda-gemm-optimization](https://github.com/zesun33/cuda-gemm-optimization) | CUDA GEMM from naive to Tensor Cores | active | GitHub source |
+| [cuda-gemm-optimization](https://github.com/zesun33/cuda-gemm-optimization) | Measured FP32 GEMM ladder: naive, shared-memory tiles, and cuBLAS baseline | active | GitHub source |
 | [cuda-memory-benchmark](https://github.com/zesun33/cuda-memory-benchmark) | GPU memory hierarchy, bandwidth, and roofline | active | GitHub source |
 | [parallel-computing-lab](https://github.com/zesun33/parallel-computing-lab) | OpenMP / CPU parallelism lab | active | GitHub source |
 | [resnet-tensorrt-bench](https://github.com/zesun33/resnet-tensorrt-bench) | ResNet TensorRT FP32 / FP16 / INT8 benchmark path | planned | GitHub source |

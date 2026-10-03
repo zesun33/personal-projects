@@ -315,14 +315,14 @@
       "github": "https://github.com/zesun33/kernel-forge",
       "verification": "available",
       "description": "Flagship developer CLI and Roofline benchmark runtime for GPU kernel engineering (CUDA & Triton)",
-      "next_milestone": "Maintain regression coverage and distribution consistency",
+      "next_milestone": "Expand measured kernel cases and GPU reference coverage",
       "visibility": "public",
       "verify_steps": [
         [
           "./scripts/verify.sh"
         ]
       ],
-      "requires_gpu": false,
+      "requires_gpu": true,
       "requirements": "See repository verification script for runtime prerequisites"
     },
     {
@@ -350,23 +350,16 @@
       "status": "active",
       "github": "https://github.com/zesun33/cuda-gemm-optimization",
       "verification": "available",
-      "description": "CUDA GEMM from naive to Tensor Cores",
-      "next_milestone": "Extend the measured GEMM optimization ladder",
+      "description": "Measured FP32 GEMM ladder: naive, shared-memory tiles, and cuBLAS baseline",
+      "next_milestone": "Add register tiling and repeat the checked performance comparison",
       "visibility": "public",
       "verify_steps": [
         [
-          "make",
-          "all"
-        ],
-        [
-          "./build/01_naive_gemm",
-          "512",
-          "512",
-          "512"
+          "./scripts/verify.sh"
         ]
       ],
       "requires_gpu": true,
-      "requirements": "CUDA toolkit and compatible NVIDIA GPU; CUDA_ARCH overrides the Makefile architecture"
+      "requirements": "NVIDIA GPU, nvcc, cuBLAS; CUDA_ARCH defaults to sm_86, CUDA_VISIBLE_DEVICES selects the GPU"
     },
     {
       "path": "cuda-memory-benchmark",
@@ -424,7 +417,7 @@
       "github": "https://github.com/zesun33/lif-spiking-core",
       "verification": "available",
       "description": "Synthesizable 8x8 LIF Spiking Core Tile, 5-port AER Router, and 4-Core 2D Mesh SoC",
-      "next_milestone": "Maintain regression coverage and distribution consistency",
+      "next_milestone": "Capture versioned timing reports and tool manifests for implementation results",
       "visibility": "public",
       "verify_steps": [
         [
