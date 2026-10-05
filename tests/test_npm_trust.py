@@ -26,8 +26,14 @@ class NpmTrustTests(unittest.TestCase):
 
     def test_restrictions_and_permissions_must_match(self):
         for changes in [{'environment': 'production'}, {'repository': 'other/repo'},
-                        {'permissions': ['createStagedPackage']}, {'permissions': []}]:
+                        {'permissions': ['createStagedPackage']}, {'permissions': []},
+                        {'permissions': ['createPackage', 'manageDistTags']}]:
             self.assertFalse(matches({**self.config, **changes}, self.project))
+
+    def test_server_added_staging_permission_is_accepted(self):
+        self.assertTrue(matches({**self.config,
+                               'permissions': ['createPackage', 'createStagedPackage']},
+                               self.project))
 
     def test_cli_empty_and_multiple_json_responses(self):
         self.assertEqual(parse_configs(''), [])

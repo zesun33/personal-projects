@@ -69,10 +69,14 @@ def parse_configs(output):
 
 
 def matches(config, project):
+    # npm also grants staging permission to direct publishers. Require direct
+    # publishing while allowing that server-added permission only.
+    permissions = config.get('permissions', [])
     return (config.get('type') == 'github' and
             config.get('repository') == project['github'].removeprefix('https://github.com/') and
             config.get('file') == WORKFLOW and not config.get('environment') and
-            config.get('permissions') == ['createPackage'])
+            isinstance(permissions, list) and 'createPackage' in permissions and
+            set(permissions) <= {'createPackage', 'createStagedPackage'})
 
 
 def list_configs(project):
