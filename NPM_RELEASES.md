@@ -28,7 +28,7 @@ python3 scripts/setup_npm_trust.py --check
 python3 scripts/setup_npm_trust.py --apply --project mcp-rtl-review
 ```
 
-`--check` only reads account settings and exits unsuccessfully if any configuration is missing. Browser approval can still be required for inspection. Trusted publishers use repository-specific GitHub identities, `publish.yml`, no environment restriction, and direct publication permission. There is no account-wide wildcard publisher.
+`--check` only reads account settings and exits unsuccessfully if any configuration is missing. Browser approval can still be required for inspection. Trusted publishers use repository-specific GitHub identities, `publish.yml`, no environment restriction, and direct publication permission. npm also grants staging permission automatically; the helper accepts it while rejecting staging-only or unrelated permissions. There is no account-wide wildcard publisher.
 
 ## Each package release
 
@@ -44,7 +44,7 @@ For example:
 gh workflow run publish.yml --repo zesun33/mcp-verilog --ref main -f version=0.2.1 -f publish=false
 ```
 
-An existing npm version cannot be overwritten. A dry run verifies packaging and command/MCP registration; it does not prove account authorization, actual publication, or EDA runtime behavior. Account configuration remains unverified until the batch's `--check` or `--apply` completes successfully.
+An existing npm version cannot be overwritten. A dry run verifies packaging and command/MCP registration; it does not prove account authorization, actual publication, or EDA runtime behavior. Account configuration for all ten packages was verified on 2026-10-05 (UTC). An actual OIDC publication has not yet been exercised; published versions are unchanged.
 
 ## Verified dry runs — 2026-10-04
 
@@ -62,3 +62,22 @@ All ten GitHub release dry runs and their normal CI checks passed on the commits
 | mcp-fpga | 0.1.2 | [`ad07ff3`](https://github.com/zesun33/mcp-fpga/commit/ad07ff3804b54792824d19601fcdcaa59460e3fa) | [run 37248413285](https://github.com/zesun33/mcp-fpga/actions/runs/37248413285) |
 | mcp-spice | 0.1.1 | [`1a0041e`](https://github.com/zesun33/mcp-spice/commit/1a0041e0a236ea0e3b89e7408a8398bc1c72e6df) | [run 37248418104](https://github.com/zesun33/mcp-spice/actions/runs/37248418104) |
 | hw-agent-scaffold | 0.1.2 | [`ea84423`](https://github.com/zesun33/hw-agent-scaffold/commit/ea84423725c428ca80dfaebbbde1eb4688fb5275) | [run 37248422620](https://github.com/zesun33/hw-agent-scaffold/actions/runs/37248422620) |
+
+## Verified npm account configuration — 2026-10-05 UTC
+
+The batch completed successfully, and a separate fresh registry read verified all ten settings at `2026-10-05T02:27:47.140387+00:00`. Every configuration uses GitHub Actions, its listed repository, `publish.yml`, no environment restriction, and both `createPackage` and npm's automatic `createStagedPackage` permission. The first created publisher was preserved when the helper resumed after correcting its staging-permission check. No versions were published.
+
+| npm package | GitHub repository | Verified trust ID |
+|---|---|---|
+| `@zesun33/mcp-verilog` | [zesun33/mcp-verilog](https://github.com/zesun33/mcp-verilog) | `f2def3b0-38f6-46d6-835f-74e993887bbb` |
+| `@zesun33/mcp-cocotb` | [zesun33/mcp-cocotb](https://github.com/zesun33/mcp-cocotb) | `cb15cac9-496b-4da6-9814-6ced1ab12f88` |
+| `@zesun33/mcp-yosys` | [zesun33/mcp-yosys](https://github.com/zesun33/mcp-yosys) | `ffb4fb90-edc0-4a80-aed5-46272d8d307a` |
+| `@zesun33/mcp-rtl-review` | [zesun33/mcp-rtl-review](https://github.com/zesun33/mcp-rtl-review) | `98ce7eb2-9621-4042-aa0f-1f81d6fb5f88` |
+| `@zesun33/mcp-openroad` | [zesun33/mcp-openroad](https://github.com/zesun33/mcp-openroad) | `cbf51096-0721-43c6-a1d3-8dc1b6ca6a95` |
+| `@zesun33/mcp-gds` | [zesun33/mcp-gds](https://github.com/zesun33/mcp-gds) | `67845b70-4879-4cf2-9620-de9548c8d5ee` |
+| `@zesun33/mcp-formal` | [zesun33/mcp-formal](https://github.com/zesun33/mcp-formal) | `a0be5797-3d8f-4fa5-8e67-bd5295b21e7a` |
+| `@zesun33/mcp-fpga` | [zesun33/mcp-fpga](https://github.com/zesun33/mcp-fpga) | `43f6cee8-cf81-4f6d-94c4-8a0ad49fef97` |
+| `@zesun33/mcp-spice` | [zesun33/mcp-spice](https://github.com/zesun33/mcp-spice) | `bd1cea56-1418-429e-b97d-3a656c6f2a03` |
+| `@zesun33/create-hw-agent` | [zesun33/hw-agent-scaffold](https://github.com/zesun33/hw-agent-scaffold) | `1aa80c7c-6e0e-4cd0-a09d-ea997ced0489` |
+
+Recheck with `python3 scripts/setup_npm_trust.py --check` after logging in if needed. The next actual release must use a new package version and the repository's `publish=true` workflow input; a real OIDC publication is still untested.
