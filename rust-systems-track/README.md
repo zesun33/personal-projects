@@ -1,5 +1,26 @@
 # Rust Systems Track
 
+<!-- BEGIN GENERATED PROJECT GUIDE -->
+
+## Purpose and first steps
+
+Follow private Rust fundamentals toward planned GEMM and LIF/AER systems projects.
+
+**Who it is for:** The maintainer following the Rust curriculum and readers interested in its future systems projects.
+
+**First task:** Use the plan and tracker to understand the sequence and phase exit criteria.
+
+**What to expect:** Public curriculum metadata for private Rust fundamentals, followed by planned GEMM and LIF/AER projects.
+
+**Current scope:** Basics remain private. The public systems bridge and golden-model repositories are future phases, not released tools.
+
+**Start here:** [Curriculum and exit criteria](PLAN.md).
+
+**Related projects:** [parallel-computing-lab](https://github.com/zesun33/parallel-computing-lab), [lif-spiking-core](https://github.com/zesun33/lif-spiking-core).
+
+[Choose another project](https://github.com/zesun33/personal-projects/blob/main/GETTING_STARTED.md).
+<!-- END GENERATED PROJECT GUIDE -->
+
 Meta catalog for learning Rust and showcasing it in ML systems / neuromorphic HW–SW codesign.
 
 Path: `personal-projects/rust-systems-track/`

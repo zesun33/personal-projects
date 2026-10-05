@@ -32,9 +32,21 @@ def load_catalog(root=ROOT):
                 raise ValueError(f'{name}: verification steps must be argument lists')
         if project.get('npm_package') and not isinstance(project.get('npm_published'), bool):
             raise ValueError(f'{name}: specify npm publication status')
+        guide = project.get('guide', {})
+        for field in ['audience', 'first_task', 'outcome', 'scope', 'start_file', 'start_label']:
+            if not isinstance(guide.get(field), str) or not guide[field].strip():
+                raise ValueError(f'{name}: missing guide {field}')
+        start = Path(guide['start_file'].split('#', 1)[0])
+        if start.is_absolute() or '..' in start.parts:
+            raise ValueError(f'{name}: guide start_file must stay within the repository')
+        if not isinstance(guide.get('related'), list):
+            raise ValueError(f'{name}: guide related projects must be a list')
     for profile, paths in data['profiles'].items():
         if not re.fullmatch(r'[a-z0-9-]+', profile) or len(paths) != len(set(paths)) or not set(paths) <= names:
             raise ValueError(f'Invalid workspace profile: {profile}')
+    for project in data['projects']:
+        if not set(project['guide']['related']) <= names:
+            raise ValueError(project['path'] + ': unknown related project')
     return data
 
 
@@ -62,7 +74,52 @@ def generated_files(data):
         }
         files[profile + '.code-workspace'] = json.dumps(workspace, indent=2) + '\n'
     files['STATUS.md'] = status_document(data)
+    files['PROJECT_GUIDE.md'] = project_guide(data)
     return files
+
+
+GUIDE_START = '<!-- BEGIN GENERATED PROJECT GUIDE -->'
+GUIDE_END = '<!-- END GENERATED PROJECT GUIDE -->'
+
+
+def project_url(project):
+    return project['github'] or ('https://github.com/zesun33/personal-projects/tree/main/' + project['path'])
+
+
+def orientation(project, data, repository_readme=False):
+    guide = project['guide']
+    by_name = {p['path']: p for p in data['projects']}
+    base = (project['github'] + '/blob/main/' if project['github'] else
+            'https://github.com/zesun33/personal-projects/blob/main/' + project['path'] + '/')
+    start = guide['start_file'] if repository_readme else base + guide['start_file']
+    lines = [project['description'] + '.', '',
+             '**Who it is for:** ' + guide['audience'], '',
+             '**First task:** ' + guide['first_task'], '',
+             '**What to expect:** ' + guide['outcome'], '',
+             '**Current scope:** ' + guide['scope'], '',
+             f"**Start here:** [{guide['start_label']}]({start})."]
+    if guide['related']:
+        links = [f'[{name}]({project_url(by_name[name])})' for name in guide['related']]
+        lines += ['', '**Related projects:** ' + ', '.join(links) + '.']
+    return '\n'.join(lines)
+
+
+def readme_orientation(project, data):
+    return '\n'.join([GUIDE_START, '', '## Purpose and first steps', '',
+                      orientation(project, data, repository_readme=True), '',
+                      '[Choose another project](https://github.com/zesun33/personal-projects/blob/main/GETTING_STARTED.md).',
+                      GUIDE_END])
+
+
+def project_guide(data):
+    lines = ['# Project guide', '',
+             'Choose a starting route in [GETTING_STARTED.md](GETTING_STARTED.md). This reference explains the audience, first task, result, and current scope of every catalog project.', '',
+             'Generated from `projects.json`; project README introductions use the same metadata.', '',
+             '## Index', '']
+    lines += [f"- [{p['path']}](#{p['path']})" for p in data['projects']]
+    for p in data['projects']:
+        lines += ['', '## ' + p['path'], '', orientation(p, data)]
+    return '\n'.join(lines) + '\n'
 
 
 def status_document(data):
@@ -77,7 +134,8 @@ def status_document(data):
     lines += ['', '| Project | Status | Verification entry point | Next milestone |', '|---|---|---|---|']
     for p in data['projects']:
         command = ' → '.join('`' + ' '.join(step) + '`' for step in p.get('verify_steps', []))
-        lines.append(f"| [{p['path']}]({p['path']}/README.md) | {p['status']} | {command or p['verification'].replace('_', ' ')} | {p['next_milestone']} |")
+        link = p['github'] or p['path'] + '/README.md'
+        lines.append(f"| [{p['path']}]({link}) | {p['status']} | {command or p['verification'].replace('_', ' ')} | {p['next_milestone']} |")
     return '\n'.join(lines) + '\n'
 
 

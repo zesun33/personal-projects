@@ -9,7 +9,7 @@
       "status": "shipped",
       "github": "https://github.com/zesun33/hw-agent-tooling",
       "verification": "available",
-      "description": "Landing page, roadmap, and verification for the agent-tooling family",
+      "description": "Find and choose the hardware-agent tools in this portfolio",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -19,7 +19,20 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "Engineers choosing hardware-agent tools and readers evaluating the portfolio.",
+        "first_task": "Follow the small FIFO walkthrough to see RTL review, simulation, and synthesis together.",
+        "outcome": "A map of the tool family, a recorded example, and links to individual tools.",
+        "scope": "A documentation hub with example transcripts; each tool is installed and maintained in its own repository.",
+        "start_file": "examples/end-to-end-demo/README.md",
+        "start_label": "FIFO walkthrough",
+        "related": [
+          "hw-agent-scaffold",
+          "agentic-asic",
+          "kernel-forge"
+        ]
+      }
     },
     {
       "path": "eda-docker-images",
@@ -28,7 +41,7 @@
       "status": "shipped",
       "github": "https://github.com/zesun33/eda-docker-images",
       "verification": "available",
-      "description": "Docker/Podman images for Verilog, SPICE, FPGA, and ASIC open-source EDA",
+      "description": "Run open-source hardware tools in shared Docker or Podman images",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -37,7 +50,20 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "Hardware developers who need consistent EDA tools locally or in CI.",
+        "first_task": "Pull the Verilog image and run the counter fixture using the Quickstart.",
+        "outcome": "A containerized simulator and tool-version output; image downloads and builds may be substantial.",
+        "scope": "Four EDA image definitions and smoke fixtures. Tool availability depends on the selected image and tag.",
+        "start_file": "README.md#quickstart",
+        "start_label": "Image Quickstart",
+        "related": [
+          "eda-devcontainer",
+          "gh-actions-for-hw",
+          "mcp-verilog"
+        ]
+      }
     },
     {
       "path": "eda-devcontainer",
@@ -46,7 +72,7 @@
       "status": "shipped",
       "github": "https://github.com/zesun33/eda-devcontainer",
       "verification": "available",
-      "description": "VS Code / Cursor Dev Container profiles on those images",
+      "description": "Develop hardware projects in editor containers backed by EDA images",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -55,7 +81,19 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "VS Code or Cursor users developing RTL, circuits, FPGA, or ASIC designs.",
+        "first_task": "Open the Verilog profile in a development container and run its fixture checks.",
+        "outcome": "An editor environment backed by the EDA images, with extensions and workspace tasks.",
+        "scope": "Development environments for four domains. A Docker or Podman runtime and the corresponding base image are required.",
+        "start_file": "README.md#quickstart",
+        "start_label": "Devcontainer Quickstart",
+        "related": [
+          "eda-docker-images",
+          "hw-agent-scaffold"
+        ]
+      }
     },
     {
       "path": "mcp-verilog",
@@ -66,7 +104,7 @@
       "verification": "available",
       "npm_package": "@zesun33/mcp-verilog",
       "npm_published": true,
-      "description": "Model Context Protocol server for Verilog/SystemVerilog linting, compilation, and simulation",
+      "description": "Lint, compile, and simulate Verilog/SystemVerilog through an MCP server",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -75,7 +113,20 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "Hardware engineers using an MCP-capable client or coding agent.",
+        "first_task": "Configure the server in your MCP client, then call `verilog_toolchain_info` before running a design.",
+        "outcome": "Compiler/simulator availability, followed by diagnostics and testbench outcomes.",
+        "scope": "Published MCP server. The npx command starts a stdio server that waits for a client; EDA execution also needs its documented host/container tools.",
+        "start_file": "README.md#execution-runtime",
+        "start_label": "Runtime requirements and configuration",
+        "related": [
+          "mcp-rtl-review",
+          "mcp-cocotb",
+          "eda-docker-images"
+        ]
+      }
     },
     {
       "path": "hw-agent-skills",
@@ -86,7 +137,7 @@
       "verification": "available",
       "npm_package": "@zesun33/hw-agent-skills",
       "npm_published": false,
-      "description": "Portable agent skills and rubrics for hardware engineering and ML systems",
+      "description": "Apply hardware-review and verification rubrics through coding-agent instruction files",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -95,7 +146,20 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "Engineers guiding a coding agent through RTL review, verification, or kernel analysis.",
+        "first_task": "Read the RTL reviewer rubric, then apply it to a clocked Verilog block.",
+        "outcome": "A concrete review checklist; copy or export the source files for your client.",
+        "scope": "Eight instruction/rubric packs. These guide review behavior; executing EDA commands requires separate tools.",
+        "start_file": "skills/rtl-reviewer/SKILL.md",
+        "start_label": "RTL review rubric",
+        "related": [
+          "mcp-rtl-review",
+          "mcp-verilog",
+          "kernel-forge"
+        ]
+      }
     },
     {
       "path": "hw-verification-suite",
@@ -104,7 +168,7 @@
       "status": "shipped",
       "github": "https://github.com/zesun33/hw-verification-suite",
       "verification": "available",
-      "description": "Centralized IEEE 1800.2 PyUVM & Cocotb Verification IP (VIP) Suite for Neuromorphic & Accelerators",
+      "description": "Reuse Python testbench components for LIF neuron tiles and AER routing",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -113,7 +177,19 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "Verification engineers building LIF neuron or AER router testbenches.",
+        "first_task": "Inspect the LIF scoreboard and compare its expected membrane state with your design.",
+        "outcome": "Reusable Python drivers, monitors, scoreboards, and stimulus/coverage utilities.",
+        "scope": "Python verification components for specific interfaces. Adapting them to another design requires matching its signals and timing; quick checks skip simulation.",
+        "start_file": "hw_verification/vip/lif/lif_scoreboard.py",
+        "start_label": "LIF scoreboard",
+        "related": [
+          "lif-spiking-core",
+          "mcp-cocotb"
+        ]
+      }
     },
     {
       "path": "mcp-cocotb",
@@ -124,7 +200,7 @@
       "verification": "available",
       "npm_package": "@zesun33/mcp-cocotb",
       "npm_published": true,
-      "description": "Model Context Protocol server for Python-based Cocotb co-simulation testbenches",
+      "description": "Run Python hardware testbenches and inspect their results through an MCP server",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -133,7 +209,19 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "Hardware engineers using an MCP-capable client or coding agent.",
+        "first_task": "Configure the server in your MCP client, then call `cocotb_toolchain_info` before running a design.",
+        "outcome": "Simulator/tool availability, then discovered tests and parsed pass/fail results.",
+        "scope": "Published MCP server. The npx command starts a stdio server that waits for a client; EDA execution also needs its documented host/container tools.",
+        "start_file": "README.md#execution-runtime",
+        "start_label": "Runtime requirements and configuration",
+        "related": [
+          "mcp-verilog",
+          "hw-verification-suite"
+        ]
+      }
     },
     {
       "path": "mcp-yosys",
@@ -144,7 +232,7 @@
       "verification": "available",
       "npm_package": "@zesun33/mcp-yosys",
       "npm_published": true,
-      "description": "Model Context Protocol server for Yosys RTL synthesis, cell statistics, and latch triage",
+      "description": "Inspect synthesis, hierarchy, and unintended latches before physical design through an MCP server",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -153,7 +241,19 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "Hardware engineers using an MCP-capable client or coding agent.",
+        "first_task": "Configure the server in your MCP client, then call `yosys_toolchain_info` before running a design.",
+        "outcome": "Tool availability, then synthesis statistics, hierarchy, and latch diagnostics.",
+        "scope": "Published MCP server. The npx command starts a stdio server that waits for a client; EDA execution also needs its documented host/container tools.",
+        "start_file": "README.md#execution-runtime",
+        "start_label": "Runtime requirements and configuration",
+        "related": [
+          "mcp-verilog",
+          "mcp-openroad"
+        ]
+      }
     },
     {
       "path": "mcp-rtl-review",
@@ -164,7 +264,7 @@
       "verification": "available",
       "npm_package": "@zesun33/mcp-rtl-review",
       "npm_published": true,
-      "description": "Model Context Protocol server for AST-backed static RTL review, semantic bug detection, and code review scoring",
+      "description": "Review RTL assignment, width, and reset rules before simulation through an MCP server",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -173,7 +273,20 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "Hardware engineers using an MCP-capable client or coding agent.",
+        "first_task": "Configure the server in your MCP client, then call `rtl_toolchain_info` before running a design.",
+        "outcome": "AST-backend availability, then rule findings with source locations and a review score.",
+        "scope": "Published static-analysis server using a Verilator AST backend. A review score covers the implemented rules and does not replace simulation or formal properties. The npx command waits for an MCP client.",
+        "start_file": "README.md#execution-runtime",
+        "start_label": "Runtime requirements and configuration",
+        "related": [
+          "hw-agent-skills",
+          "mcp-verilog",
+          "mcp-formal"
+        ]
+      }
     },
     {
       "path": "mcp-openroad",
@@ -184,7 +297,7 @@
       "verification": "available",
       "npm_package": "@zesun33/mcp-openroad",
       "npm_published": true,
-      "description": "Model Context Protocol server for OpenROAD physical design (floorplan, CTS, PDN, route, STA; Nangate45 + Sky130)",
+      "description": "Run physical-design stages and inspect timing for a netlist through an MCP server",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -193,7 +306,20 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "Hardware engineers using an MCP-capable client or coding agent.",
+        "first_task": "Configure the server in your MCP client, then call `openroad_toolchain_info` before running a design.",
+        "outcome": "Tool availability, then placement/routing artifacts and stage-specific timing metrics.",
+        "scope": "Published MCP server. The npx command starts a stdio server that waits for a client; EDA execution also needs its documented host/container tools.",
+        "start_file": "README.md#execution-runtime",
+        "start_label": "Runtime requirements and configuration",
+        "related": [
+          "mcp-yosys",
+          "mcp-gds",
+          "agentic-asic"
+        ]
+      }
     },
     {
       "path": "mcp-gds",
@@ -204,7 +330,7 @@
       "verification": "available",
       "npm_package": "@zesun33/mcp-gds",
       "npm_published": true,
-      "description": "MCP server for GDS stream-out, KLayout DRC, Magic extract, and Netgen LVS",
+      "description": "Inspect layouts, stream out GDS, and run geometry or netlist checks through an MCP server",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -213,7 +339,19 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "Hardware engineers using an MCP-capable client or coding agent.",
+        "first_task": "Configure the server in your MCP client, then call `gds_toolchain_info` before running a design.",
+        "outcome": "Tool availability, then layout summaries and check results for the chosen inputs/decks.",
+        "scope": "Published MCP server for layout and netlist checks. Smoke geometry checks use the selected deck; PDK-specific extraction/LVS requires appropriate technology and setup files. The npx command waits for an MCP client.",
+        "start_file": "README.md#execution-runtime",
+        "start_label": "Runtime requirements and configuration",
+        "related": [
+          "mcp-openroad",
+          "agentic-asic"
+        ]
+      }
     },
     {
       "path": "mcp-formal",
@@ -224,7 +362,7 @@
       "verification": "available",
       "npm_package": "@zesun33/mcp-formal",
       "npm_published": true,
-      "description": "MCP server for SymbiYosys formal prove / SVA lint",
+      "description": "Check assertions and run bounded or inductive RTL proofs through an MCP server",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -233,7 +371,19 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "Hardware engineers using an MCP-capable client or coding agent.",
+        "first_task": "Configure the server in your MCP client, then call `formal_toolchain_info` before running a design.",
+        "outcome": "Engine availability, then explicit proof, counterexample, unknown, error, or timeout results.",
+        "scope": "Published MCP server with explicit proof outcomes. A proof applies to the supplied properties, assumptions, engine, and bounds; unknown or timeout is not success. The npx command waits for an MCP client.",
+        "start_file": "README.md#execution-runtime",
+        "start_label": "Runtime requirements and configuration",
+        "related": [
+          "mcp-rtl-review",
+          "mcp-verilog"
+        ]
+      }
     },
     {
       "path": "mcp-fpga",
@@ -244,7 +394,7 @@
       "verification": "available",
       "npm_package": "@zesun33/mcp-fpga",
       "npm_published": true,
-      "description": "MCP server for Yosys + nextpnr FPGA synth / P&R / bitstream",
+      "description": "Synthesize and route FPGA designs and prepare bitstreams through an MCP server",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -253,7 +403,19 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "Hardware engineers using an MCP-capable client or coding agent.",
+        "first_task": "Configure the server in your MCP client, then call `fpga_toolchain_info` before running a design.",
+        "outcome": "Tool availability, then synthesis/place-and-route metrics and bitstream artifacts.",
+        "scope": "Published MCP server for iCE40/ECP5 flows. Programming defaults to a dry run and requires an attached board for an actual hardware check. The npx command waits for an MCP client.",
+        "start_file": "README.md#execution-runtime",
+        "start_label": "Runtime requirements and configuration",
+        "related": [
+          "mcp-yosys",
+          "mcp-verilog"
+        ]
+      }
     },
     {
       "path": "mcp-spice",
@@ -264,7 +426,7 @@
       "verification": "available",
       "npm_package": "@zesun33/mcp-spice",
       "npm_published": true,
-      "description": "MCP server for ngspice batch circuit simulation",
+      "description": "Run ngspice circuit netlists and retrieve measurement results through an MCP server",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -273,7 +435,19 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "Hardware engineers using an MCP-capable client or coding agent.",
+        "first_task": "Configure the server in your MCP client, then call `spice_toolchain_info` before running a design.",
+        "outcome": "Simulator availability, then parsed circuit measurements and execution status.",
+        "scope": "Published MCP server. The npx command starts a stdio server that waits for a client; EDA execution also needs its documented host/container tools.",
+        "start_file": "README.md#execution-runtime",
+        "start_label": "Runtime requirements and configuration",
+        "related": [
+          "eda-docker-images",
+          "hw-agent-scaffold"
+        ]
+      }
     },
     {
       "path": "hw-agent-scaffold",
@@ -284,7 +458,7 @@
       "verification": "available",
       "npm_package": "@zesun33/create-hw-agent",
       "npm_published": true,
-      "description": "One-step `npx @zesun33/create-hw-agent` installer",
+      "description": "Create a starter RTL project and configuration for nine hardware MCP servers",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -293,7 +467,20 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "New users who want a small RTL project and the hardware MCP configuration in one step.",
+        "first_task": "Run `npx @zesun33/create-hw-agent my-asic`, inspect the generated files, then follow its README.",
+        "outcome": "Starter counter RTL, a testbench, a Makefile, and a client configuration for all nine MCP servers.",
+        "scope": "Scaffolding is available from npm. Simulation and physical design still need a container runtime, images, and any relevant PDK.",
+        "start_file": "template/README.md",
+        "start_label": "Generated project instructions",
+        "related": [
+          "hw-agent-tooling",
+          "eda-docker-images",
+          "mcp-verilog"
+        ]
+      }
     },
     {
       "path": "gh-actions-for-hw",
@@ -302,10 +489,22 @@
       "status": "shipped",
       "github": "https://github.com/zesun33/gh-actions-for-hw",
       "verification": "not_configured",
-      "description": "Reusable GitHub Actions composites on GHCR EDA images",
+      "description": "Run hardware checks through reusable GitHub Actions",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
-      "requirements": "See repository README"
+      "requirements": "See repository README",
+      "guide": {
+        "audience": "Repository maintainers adding hardware checks to GitHub CI.",
+        "first_task": "Copy the Verilog simulation action usage into a workflow for your RTL and testbench.",
+        "outcome": "A CI job that executes the selected EDA check and reports failure to GitHub.",
+        "scope": "Six composite actions backed by container images. Simulation, synthesis, and physical-design checks have different inputs and prerequisites.",
+        "start_file": "README.md#usage",
+        "start_label": "Workflow usage",
+        "related": [
+          "eda-docker-images",
+          "mcp-verilog"
+        ]
+      }
     },
     {
       "path": "kernel-forge",
@@ -314,7 +513,7 @@
       "status": "shipped",
       "github": "https://github.com/zesun33/kernel-forge",
       "verification": "available",
-      "description": "Flagship developer CLI and Roofline benchmark runtime for GPU kernel engineering (CUDA & Triton)",
+      "description": "Generate CUDA kernel templates and inspect correctness, timing, and modeled Roofline limits",
       "next_milestone": "Expand measured kernel cases and GPU reference coverage",
       "visibility": "public",
       "verify_steps": [
@@ -323,7 +522,19 @@
         ]
       ],
       "requires_gpu": true,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "CUDA developers learning or automating kernel generation and performance analysis.",
+        "first_task": "Install from the checkout and run `forge doctor --json` before generating a kernel.",
+        "outcome": "CUDA-visible device information; generated templates can then be checked and timed on your GPU.",
+        "scope": "A Python CLI with CUDA templates and modeled Roofline analysis. Actual execution requires a CUDA GPU/toolkit; modeled limits are separate from measured timings.",
+        "start_file": "README.md#quick-start",
+        "start_label": "CLI Quickstart",
+        "related": [
+          "cuda-gemm-optimization",
+          "cuda-memory-benchmark"
+        ]
+      }
     },
     {
       "path": "agentic-asic",
@@ -332,7 +543,7 @@
       "status": "shipped",
       "github": "https://github.com/zesun33/agentic-asic",
       "verification": "available",
-      "description": "Autonomous silicon compilation and signoff orchestrator powered by EDA MCP servers",
+      "description": "Coordinate RTL review, verification, synthesis, and implementation through EDA MCP servers",
       "next_milestone": "Maintain regression coverage and distribution consistency",
       "visibility": "public",
       "verify_steps": [
@@ -341,7 +552,20 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "Hardware engineers combining several EDA stages into one repeatable workflow.",
+        "first_task": "Install the CLI from the checkout, run `asic doctor`, then inspect the counter demo.",
+        "outcome": "Per-stage results and a report tying review, verification, synthesis, and implementation together.",
+        "scope": "An orchestrator over the MCP servers. Results apply to the selected design, constraints, tools, and PDK; a successful run does not establish manufacturing qualification.",
+        "start_file": "README.md#quick-tour--cli-usage",
+        "start_label": "CLI walkthrough",
+        "related": [
+          "hw-agent-scaffold",
+          "mcp-openroad",
+          "mcp-gds"
+        ]
+      }
     },
     {
       "path": "cuda-gemm-optimization",
@@ -350,7 +574,7 @@
       "status": "active",
       "github": "https://github.com/zesun33/cuda-gemm-optimization",
       "verification": "available",
-      "description": "Measured FP32 GEMM ladder: naive, shared-memory tiles, and cuBLAS baseline",
+      "description": "Compare correctness and measured FP32 throughput across naive, tiled, and cuBLAS GEMM",
       "next_milestone": "Add register tiling and repeat the checked performance comparison",
       "visibility": "public",
       "verify_steps": [
@@ -359,7 +583,19 @@
         ]
       ],
       "requires_gpu": true,
-      "requirements": "NVIDIA GPU, nvcc, cuBLAS; CUDA_ARCH defaults to sm_86, CUDA_VISIBLE_DEVICES selects the GPU"
+      "requirements": "NVIDIA GPU, nvcc, cuBLAS; CUDA_ARCH defaults to sm_86, CUDA_VISIBLE_DEVICES selects the GPU",
+      "guide": {
+        "audience": "Learners and GPU engineers comparing matrix-multiplication implementations.",
+        "first_task": "Read the recorded comparison, then run the checked GEMM executable on your own selected GPU.",
+        "outcome": "Correctness checks plus latency/throughput comparisons for naive GEMM, shared-memory tiles, and strict FP32 cuBLAS.",
+        "scope": "Implemented CUDA comparison with recorded RTX A5000 measurements. Speedups depend on shape and hardware; later optimizations remain future work.",
+        "start_file": "BENCHMARKS.md",
+        "start_label": "Benchmark method and limitations",
+        "related": [
+          "kernel-forge",
+          "cuda-memory-benchmark"
+        ]
+      }
     },
     {
       "path": "cuda-memory-benchmark",
@@ -368,10 +604,22 @@
       "status": "active",
       "github": "https://github.com/zesun33/cuda-memory-benchmark",
       "verification": "not_configured",
-      "description": "GPU memory hierarchy, bandwidth, and roofline",
-      "next_milestone": "Implement access-pattern and shared-memory benchmarks",
+      "description": "Learn CUDA memory behavior through notes and a bandwidth exercise scaffold",
+      "next_milestone": "Complete and correctness-check the existing global-memory bandwidth exercise",
       "visibility": "public",
-      "requirements": "See repository README"
+      "requirements": "See repository README",
+      "guide": {
+        "audience": "CUDA learners studying memory access and bandwidth.",
+        "first_task": "Read the memory-hierarchy notes, then implement the TODOs in the global-memory exercise.",
+        "outcome": "An exercise framework to turn into a correctness-checked bandwidth measurement.",
+        "scope": "Notes and an incomplete CUDA exercise are present. Timing, allocation, and copy-kernel TODOs must be completed before it provides a bandwidth result.",
+        "start_file": "notes/00_memory_hierarchy.md",
+        "start_label": "Memory-hierarchy notes",
+        "related": [
+          "cuda-gemm-optimization",
+          "kernel-forge"
+        ]
+      }
     },
     {
       "path": "parallel-computing-lab",
@@ -380,10 +628,22 @@
       "status": "active",
       "github": "https://github.com/zesun33/parallel-computing-lab",
       "verification": "not_configured",
-      "description": "OpenMP / CPU parallelism lab",
+      "description": "Learn CPU parallelism by completing OpenMP exercises",
       "next_milestone": "Implement reductions and synchronization exercises",
       "visibility": "public",
-      "requirements": "See repository README"
+      "requirements": "See repository README",
+      "guide": {
+        "audience": "Learners moving from serial CPU code to OpenMP parallel regions and loops.",
+        "first_task": "Read the OpenMP notes and uncomment the first exercise one section at a time.",
+        "outcome": "Thread output and loop-timing experiments after completing the marked sections.",
+        "scope": "Two OpenMP exercises with commented-out parallel sections. Reductions, synchronization, MPI, and measured scaling studies are future work.",
+        "start_file": "notes/01_openmp_basics.md",
+        "start_label": "OpenMP basics",
+        "related": [
+          "cuda-gemm-optimization",
+          "rust-systems-track"
+        ]
+      }
     },
     {
       "path": "resnet-tensorrt-bench",
@@ -392,10 +652,22 @@
       "status": "planned",
       "github": "https://github.com/zesun33/resnet-tensorrt-bench",
       "verification": "not_configured",
-      "description": "ResNet TensorRT FP32 / FP16 / INT8 benchmark path",
+      "description": "Plan a future ResNet inference study comparing precision, latency, and accuracy",
       "next_milestone": "Implement model export and a measured TensorRT baseline",
       "visibility": "public",
-      "requirements": "See repository README"
+      "requirements": "See repository README",
+      "guide": {
+        "audience": "Readers planning an inference-optimization study with latency and accuracy checks.",
+        "first_task": "Review the planned export, calibration, and comparison stages before choosing the first implementation.",
+        "outcome": "A roadmap for a future FP32/FP16/INT8 benchmark, with an initial baseline milestone.",
+        "scope": "Planning documents only. Model export, engines, datasets, accuracy checks, and benchmark code are not implemented here yet.",
+        "start_file": "README.md#learning-roadmap-planned",
+        "start_label": "Planned implementation stages",
+        "related": [
+          "cuda-gemm-optimization",
+          "triton-flash-attention-lite"
+        ]
+      }
     },
     {
       "path": "triton-flash-attention-lite",
@@ -404,10 +676,22 @@
       "status": "planned",
       "github": "https://github.com/zesun33/triton-flash-attention-lite",
       "verification": "not_configured",
-      "description": "FlashAttention-style kernels in Triton",
+      "description": "Plan a future tiled-attention implementation and correctness/performance study",
       "next_milestone": "Implement and check the first attention kernel",
       "visibility": "public",
-      "requirements": "See repository README"
+      "requirements": "See repository README",
+      "guide": {
+        "audience": "Learners planning to study tiled attention and online softmax.",
+        "first_task": "Read the roadmap and define a reference attention calculation before implementing a Triton kernel.",
+        "outcome": "A sequence of planned baseline, softmax, tiling, and correctness/performance tasks.",
+        "scope": "Planning documents only; no attention kernel or measured benchmark is present.",
+        "start_file": "README.md#learning-roadmap-planned",
+        "start_label": "Planned attention study",
+        "related": [
+          "cuda-gemm-optimization",
+          "resnet-tensorrt-bench"
+        ]
+      }
     },
     {
       "path": "lif-spiking-core",
@@ -416,7 +700,7 @@
       "status": "shipped",
       "github": "https://github.com/zesun33/lif-spiking-core",
       "verification": "available",
-      "description": "Synthesizable 8x8 LIF Spiking Core Tile, 5-port AER Router, and 4-Core 2D Mesh SoC",
+      "description": "Study and simulate LIF neuron tiles, AER routing, and a 2x2 neuromorphic mesh",
       "next_milestone": "Capture versioned timing reports and tool manifests for implementation results",
       "visibility": "public",
       "verify_steps": [
@@ -425,43 +709,92 @@
         ]
       ],
       "requires_gpu": false,
-      "requirements": "See repository verification script for runtime prerequisites"
+      "requirements": "See repository verification script for runtime prerequisites",
+      "guide": {
+        "audience": "RTL and neuromorphic-computing developers studying event-driven neuron tiles and routing.",
+        "first_task": "Read the architecture, then follow the neuron/tile testbench paths and verification notes.",
+        "outcome": "LIF neuron/tile/router RTL, reference models, simulation tests, and recorded implementation artifacts.",
+        "scope": "Implemented RTL and testbenches with historical results. Coverage is partial; implementation artifacts and timing estimates are not measurements of fabricated silicon.",
+        "start_file": "ARCHITECTURE.md",
+        "start_label": "Architecture overview",
+        "related": [
+          "hw-verification-suite",
+          "mcp-cocotb",
+          "rust-systems-track"
+        ]
+      }
     },
     {
       "path": "cim-bit-serial-pe",
       "family": "silicon",
-      "kind": "design",
-      "status": "active",
+      "kind": "architecture",
+      "status": "planned",
       "github": "https://github.com/zesun33/cim-bit-serial-pe",
       "verification": "not_configured",
-      "description": "Bit-serial compute-in-memory processing element with precision scalability",
-      "next_milestone": "Complete self-checking precision and zero-skipping regression",
+      "description": "Specify a proposed bit-serial compute-in-memory processing element",
+      "next_milestone": "Implement the documented arithmetic in RTL and check it against a software reference",
       "visibility": "public",
-      "requirements": "See repository README"
+      "requirements": "See repository README",
+      "guide": {
+        "audience": "Hardware learners comparing bit-serial arithmetic and locally stored weights.",
+        "first_task": "Work through the activation-bit accumulation equation and the proposed interface.",
+        "outcome": "An architectural specification to guide a future RTL implementation and reference model.",
+        "scope": "Architecture draft only: no RTL, simulation tests, measured area, or power results are present.",
+        "start_file": "ARCHITECTURE.md",
+        "start_label": "Arithmetic and interface proposal",
+        "related": [
+          "tiny-tpu-systolic-array",
+          "neuro-cim-tile"
+        ]
+      }
     },
     {
       "path": "neuro-cim-tile",
       "family": "silicon",
-      "kind": "design",
-      "status": "active",
+      "kind": "architecture",
+      "status": "planned",
       "github": "https://github.com/zesun33/neuro-cim-tile",
       "verification": "not_configured",
-      "description": "Neuromorphic mixed-signal / digital CIM macro with multi-bit synaptic crossbar",
-      "next_milestone": "Complete digital-periphery and device-model checks",
+      "description": "Specify a proposed compute-in-memory tile and its digital/device-model boundaries",
+      "next_milestone": "Implement and verify the digital periphery before adding calibrated device models",
       "visibility": "public",
-      "requirements": "See repository README"
+      "requirements": "See repository README",
+      "guide": {
+        "audience": "Researchers planning the boundaries between digital accumulation and CIM device models.",
+        "first_task": "Trace the proposed row-driver, crossbar, accumulator, and activation interfaces.",
+        "outcome": "A hierarchy/interface proposal for a future tile model and digital implementation.",
+        "scope": "Architecture draft only. RTL, behavioral device models, calibration data, and verification are future work.",
+        "start_file": "ARCHITECTURE.md",
+        "start_label": "Tile hierarchy proposal",
+        "related": [
+          "cim-bit-serial-pe",
+          "lif-spiking-core"
+        ]
+      }
     },
     {
       "path": "tiny-tpu-systolic-array",
       "family": "silicon",
-      "kind": "design",
-      "status": "active",
+      "kind": "architecture",
+      "status": "planned",
       "github": "https://github.com/zesun33/tiny-tpu-systolic-array",
       "verification": "not_configured",
-      "description": "Matrix multiplication systolic array engine with double-buffered weight stationary dataflow",
-      "next_milestone": "Complete GEMM/dataflow regression",
+      "description": "Specify a proposed INT8 systolic-array dataflow and interface",
+      "next_milestone": "Implement a small array and check its dataflow against a GEMM reference",
       "visibility": "public",
-      "requirements": "See repository README"
+      "requirements": "See repository README",
+      "guide": {
+        "audience": "Hardware learners studying matrix-multiplication dataflow and PE timing.",
+        "first_task": "Trace one small matrix product through the proposed skewed input schedule.",
+        "outcome": "A systolic-array dataflow and interface proposal to implement and compare with a software GEMM reference.",
+        "scope": "Architecture draft only: no synthesizable array, executable regression, or measured implementation is present.",
+        "start_file": "ARCHITECTURE.md",
+        "start_label": "Systolic dataflow proposal",
+        "related": [
+          "cim-bit-serial-pe",
+          "cuda-gemm-optimization"
+        ]
+      }
     },
     {
       "path": "rust-systems-track",
@@ -470,10 +803,22 @@
       "status": "learning",
       "github": null,
       "verification": "learning",
-      "description": "Private Rust fundamentals followed by quantized GEMM and an RTL-checked LIF/AER golden model",
+      "description": "Follow private Rust fundamentals toward planned GEMM and LIF/AER systems projects",
       "next_milestone": "Finish Book chapters 1\u20132 and rustlings intro/variables (private)",
       "visibility": "public metadata; private basics",
-      "requirements": "See repository README"
+      "requirements": "See repository README",
+      "guide": {
+        "audience": "The maintainer following the Rust curriculum and readers interested in its future systems projects.",
+        "first_task": "Use the plan and tracker to understand the sequence and phase exit criteria.",
+        "outcome": "Public curriculum metadata for private Rust fundamentals, followed by planned GEMM and LIF/AER projects.",
+        "scope": "Basics remain private. The public systems bridge and golden-model repositories are future phases, not released tools.",
+        "start_file": "PLAN.md",
+        "start_label": "Curriculum and exit criteria",
+        "related": [
+          "parallel-computing-lab",
+          "lif-spiking-core"
+        ]
+      }
     }
   ],
   "workspace_settings": {

@@ -70,7 +70,9 @@ class CatalogTests(unittest.TestCase):
             shutil.copy2(ROOT / 'scripts' / name, scripts / name)
         data = json.loads((self.root / 'projects.json').read_text())
         selected = [p for p in data['projects'] if p['path'] in {'hw-agent-scaffold', 'resnet-tensorrt-bench'}]
+        selected_names = {p['path'] for p in selected}
         for p in selected:
+            p['guide']['related'] = [name for name in p['guide']['related'] if name in selected_names]
             if p['path'] == 'hw-agent-scaffold':
                 p['verify_steps'] = [[sys.executable, '-c', 'raise SystemExit(3)']]
             (self.root / p['path']).mkdir()

@@ -1,11 +1,26 @@
 # personal-projects
 
-Meta catalog and multi-root workspace for **zesun33** public ML systems and HW agent tooling repos.
+A collection of hardware-engineering tools, ML performance studies, RTL designs, and architecture notes by **zesun33**.
+
+The projects connect two goals: understand how computation and data movement affect performance, and make hardware development easier to review, test, and reproduce. Some repositories provide usable tools; others are learning exercises or plans for future implementations.
+
+## Find your starting point
+
+| I want to… | Start with | First useful result |
+|---|---|---|
+| Try the hardware-agent tools | [hw-agent-scaffold](https://github.com/zesun33/hw-agent-scaffold) | A starter counter design, testbench, and MCP client configuration |
+| Understand how the tools fit together | [hw-agent-tooling](https://github.com/zesun33/hw-agent-tooling) | A small RTL review → simulation → synthesis walkthrough |
+| Compare GPU matrix-multiplication performance | [cuda-gemm-optimization](https://github.com/zesun33/cuda-gemm-optimization) | Correctness checks and a documented naive/tiled/cuBLAS comparison |
+| Generate and profile a CUDA kernel | [kernel-forge](https://github.com/zesun33/kernel-forge) | Device information, a kernel template, and timing/model reports |
+| Study event-driven neuromorphic RTL | [lif-spiking-core](https://github.com/zesun33/lif-spiking-core) | Neuron/tile/router source, testbenches, and verification notes |
+| Learn or discuss the unfinished projects | [PROJECT_GUIDE.md](PROJECT_GUIDE.md) | Clear exercise, architecture-draft, and roadmap boundaries |
+
+Read [GETTING_STARTED.md](GETTING_STARTED.md) for prerequisites, a first working example, and a glossary. The [project guide](PROJECT_GUIDE.md) explains who each repository is for, what to try first, and what currently exists.
 
 - Website: [zesun33.github.io](https://zesun33.github.io)
 - Landing page for the agent-tooling family: [zesun33/hw-agent-tooling](https://github.com/zesun33/hw-agent-tooling)
 
-Clone this catalog (optional — each project is also a standalone repo):
+You can use any individual repository directly. Clone this catalog when you want the full project map and local workspace:
 
 ```bash
 git clone https://github.com/zesun33/personal-projects.git
@@ -20,11 +35,12 @@ Open `personal-projects.code-workspace` in Cursor / VS Code for a multi-root wor
 
 ```bash
 python3 scripts/generate_catalog.py
+python3 scripts/generate_project_guides.py
 python3 scripts/check_catalog.py
 python3 scripts/check_catalog.py --network
 ```
 
-Use `--catalog-only` for a fresh parent clone or CI without child checkouts. See [`STATUS.md`](STATUS.md) for maturity/next milestones, [`DEPENDENCIES.md`](DEPENDENCIES.md) for project relationships, and [`SYNC.md`](SYNC.md) for the cross-machine workflow.
+Use `--catalog-only` for a fresh parent clone or CI without child checkouts. README orientation sections and `PROJECT_GUIDE.md` share the `guide` metadata in `projects.json`; `generate_project_guides.py` updates only marked sections and preserves the rest of each README. Use its `--check` option to inspect drift. See [`STATUS.md`](STATUS.md) for maturity/next milestones, [`DEPENDENCIES.md`](DEPENDENCIES.md) for project relationships, and [`SYNC.md`](SYNC.md) for the cross-machine workflow.
 
 See [`UPGRADES.md`](UPGRADES.md) for portable GPU selection, measured GEMM comparisons, hardware evidence definitions, and npm release automation.
 
@@ -64,49 +80,49 @@ Full EDA/GPU tests have runtime prerequisites. The RTL-review backend fix and pu
 
 | Project | Purpose | Maturity | Distribution |
 |---|---|---|---|
-| [hw-agent-tooling](https://github.com/zesun33/hw-agent-tooling) | Landing page, roadmap, and verification for the agent-tooling family | shipped | GitHub source |
-| [eda-docker-images](https://github.com/zesun33/eda-docker-images) | Docker/Podman images for Verilog, SPICE, FPGA, and ASIC open-source EDA | shipped | GitHub source |
-| [eda-devcontainer](https://github.com/zesun33/eda-devcontainer) | VS Code / Cursor Dev Container profiles on those images | shipped | GitHub source |
-| [mcp-verilog](https://github.com/zesun33/mcp-verilog) | Model Context Protocol server for Verilog/SystemVerilog linting, compilation, and simulation | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-verilog) |
-| [hw-agent-skills](https://github.com/zesun33/hw-agent-skills) | Portable agent skills and rubrics for hardware engineering and ML systems | shipped | Source files (no npm package) |
-| [hw-verification-suite](https://github.com/zesun33/hw-verification-suite) | Centralized IEEE 1800.2 PyUVM & Cocotb Verification IP (VIP) Suite for Neuromorphic & Accelerators | shipped | GitHub source |
-| [mcp-cocotb](https://github.com/zesun33/mcp-cocotb) | Model Context Protocol server for Python-based Cocotb co-simulation testbenches | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-cocotb) |
-| [mcp-yosys](https://github.com/zesun33/mcp-yosys) | Model Context Protocol server for Yosys RTL synthesis, cell statistics, and latch triage | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-yosys) |
-| [mcp-rtl-review](https://github.com/zesun33/mcp-rtl-review) | Model Context Protocol server for AST-backed static RTL review, semantic bug detection, and code review scoring | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-rtl-review) |
-| [mcp-openroad](https://github.com/zesun33/mcp-openroad) | Model Context Protocol server for OpenROAD physical design (floorplan, CTS, PDN, route, STA; Nangate45 + Sky130) | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-openroad) |
-| [mcp-gds](https://github.com/zesun33/mcp-gds) | MCP server for GDS stream-out, KLayout DRC, Magic extract, and Netgen LVS | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-gds) |
-| [mcp-formal](https://github.com/zesun33/mcp-formal) | MCP server for SymbiYosys formal prove / SVA lint | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-formal) |
-| [mcp-fpga](https://github.com/zesun33/mcp-fpga) | MCP server for Yosys + nextpnr FPGA synth / P&R / bitstream | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-fpga) |
-| [mcp-spice](https://github.com/zesun33/mcp-spice) | MCP server for ngspice batch circuit simulation | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-spice) |
-| [hw-agent-scaffold](https://github.com/zesun33/hw-agent-scaffold) | One-step `npx @zesun33/create-hw-agent` installer | shipped | [npm](https://www.npmjs.com/package/@zesun33/create-hw-agent) |
-| [gh-actions-for-hw](https://github.com/zesun33/gh-actions-for-hw) | Reusable GitHub Actions composites on GHCR EDA images | shipped | GitHub source |
-| [kernel-forge](https://github.com/zesun33/kernel-forge) | Flagship developer CLI and Roofline benchmark runtime for GPU kernel engineering (CUDA & Triton) | shipped | GitHub source |
-| [agentic-asic](https://github.com/zesun33/agentic-asic) | Autonomous silicon compilation and signoff orchestrator powered by EDA MCP servers | shipped | GitHub source |
+| [hw-agent-tooling](https://github.com/zesun33/hw-agent-tooling) | Find and choose the hardware-agent tools in this portfolio | shipped | GitHub source |
+| [eda-docker-images](https://github.com/zesun33/eda-docker-images) | Run open-source hardware tools in shared Docker or Podman images | shipped | GitHub source |
+| [eda-devcontainer](https://github.com/zesun33/eda-devcontainer) | Develop hardware projects in editor containers backed by EDA images | shipped | GitHub source |
+| [mcp-verilog](https://github.com/zesun33/mcp-verilog) | Lint, compile, and simulate Verilog/SystemVerilog through an MCP server | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-verilog) |
+| [hw-agent-skills](https://github.com/zesun33/hw-agent-skills) | Apply hardware-review and verification rubrics through coding-agent instruction files | shipped | Source files (no npm package) |
+| [hw-verification-suite](https://github.com/zesun33/hw-verification-suite) | Reuse Python testbench components for LIF neuron tiles and AER routing | shipped | GitHub source |
+| [mcp-cocotb](https://github.com/zesun33/mcp-cocotb) | Run Python hardware testbenches and inspect their results through an MCP server | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-cocotb) |
+| [mcp-yosys](https://github.com/zesun33/mcp-yosys) | Inspect synthesis, hierarchy, and unintended latches before physical design through an MCP server | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-yosys) |
+| [mcp-rtl-review](https://github.com/zesun33/mcp-rtl-review) | Review RTL assignment, width, and reset rules before simulation through an MCP server | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-rtl-review) |
+| [mcp-openroad](https://github.com/zesun33/mcp-openroad) | Run physical-design stages and inspect timing for a netlist through an MCP server | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-openroad) |
+| [mcp-gds](https://github.com/zesun33/mcp-gds) | Inspect layouts, stream out GDS, and run geometry or netlist checks through an MCP server | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-gds) |
+| [mcp-formal](https://github.com/zesun33/mcp-formal) | Check assertions and run bounded or inductive RTL proofs through an MCP server | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-formal) |
+| [mcp-fpga](https://github.com/zesun33/mcp-fpga) | Synthesize and route FPGA designs and prepare bitstreams through an MCP server | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-fpga) |
+| [mcp-spice](https://github.com/zesun33/mcp-spice) | Run ngspice circuit netlists and retrieve measurement results through an MCP server | shipped | [npm](https://www.npmjs.com/package/@zesun33/mcp-spice) |
+| [hw-agent-scaffold](https://github.com/zesun33/hw-agent-scaffold) | Create a starter RTL project and configuration for nine hardware MCP servers | shipped | [npm](https://www.npmjs.com/package/@zesun33/create-hw-agent) |
+| [gh-actions-for-hw](https://github.com/zesun33/gh-actions-for-hw) | Run hardware checks through reusable GitHub Actions | shipped | GitHub source |
+| [kernel-forge](https://github.com/zesun33/kernel-forge) | Generate CUDA kernel templates and inspect correctness, timing, and modeled Roofline limits | shipped | GitHub source |
+| [agentic-asic](https://github.com/zesun33/agentic-asic) | Coordinate RTL review, verification, synthesis, and implementation through EDA MCP servers | shipped | GitHub source |
 
 ## ML systems
 
 | Project | Purpose | Maturity | Distribution |
 |---|---|---|---|
-| [cuda-gemm-optimization](https://github.com/zesun33/cuda-gemm-optimization) | Measured FP32 GEMM ladder: naive, shared-memory tiles, and cuBLAS baseline | active | GitHub source |
-| [cuda-memory-benchmark](https://github.com/zesun33/cuda-memory-benchmark) | GPU memory hierarchy, bandwidth, and roofline | active | GitHub source |
-| [parallel-computing-lab](https://github.com/zesun33/parallel-computing-lab) | OpenMP / CPU parallelism lab | active | GitHub source |
-| [resnet-tensorrt-bench](https://github.com/zesun33/resnet-tensorrt-bench) | ResNet TensorRT FP32 / FP16 / INT8 benchmark path | planned | GitHub source |
-| [triton-flash-attention-lite](https://github.com/zesun33/triton-flash-attention-lite) | FlashAttention-style kernels in Triton | planned | GitHub source |
+| [cuda-gemm-optimization](https://github.com/zesun33/cuda-gemm-optimization) | Compare correctness and measured FP32 throughput across naive, tiled, and cuBLAS GEMM | active | GitHub source |
+| [cuda-memory-benchmark](https://github.com/zesun33/cuda-memory-benchmark) | Learn CUDA memory behavior through notes and a bandwidth exercise scaffold | active | GitHub source |
+| [parallel-computing-lab](https://github.com/zesun33/parallel-computing-lab) | Learn CPU parallelism by completing OpenMP exercises | active | GitHub source |
+| [resnet-tensorrt-bench](https://github.com/zesun33/resnet-tensorrt-bench) | Plan a future ResNet inference study comparing precision, latency, and accuracy | planned | GitHub source |
+| [triton-flash-attention-lite](https://github.com/zesun33/triton-flash-attention-lite) | Plan a future tiled-attention implementation and correctness/performance study | planned | GitHub source |
 
 ## Silicon designs
 
 | Project | Purpose | Maturity | Distribution |
 |---|---|---|---|
-| [lif-spiking-core](https://github.com/zesun33/lif-spiking-core) | Synthesizable 8x8 LIF Spiking Core Tile, 5-port AER Router, and 4-Core 2D Mesh SoC | shipped | GitHub source |
-| [cim-bit-serial-pe](https://github.com/zesun33/cim-bit-serial-pe) | Bit-serial compute-in-memory processing element with precision scalability | active | GitHub source |
-| [neuro-cim-tile](https://github.com/zesun33/neuro-cim-tile) | Neuromorphic mixed-signal / digital CIM macro with multi-bit synaptic crossbar | active | GitHub source |
-| [tiny-tpu-systolic-array](https://github.com/zesun33/tiny-tpu-systolic-array) | Matrix multiplication systolic array engine with double-buffered weight stationary dataflow | active | GitHub source |
+| [lif-spiking-core](https://github.com/zesun33/lif-spiking-core) | Study and simulate LIF neuron tiles, AER routing, and a 2x2 neuromorphic mesh | shipped | GitHub source |
+| [cim-bit-serial-pe](https://github.com/zesun33/cim-bit-serial-pe) | Specify a proposed bit-serial compute-in-memory processing element | planned | GitHub source |
+| [neuro-cim-tile](https://github.com/zesun33/neuro-cim-tile) | Specify a proposed compute-in-memory tile and its digital/device-model boundaries | planned | GitHub source |
+| [tiny-tpu-systolic-array](https://github.com/zesun33/tiny-tpu-systolic-array) | Specify a proposed INT8 systolic-array dataflow and interface | planned | GitHub source |
 
 ## Rust systems
 
 | Project | Purpose | Maturity | Distribution |
 |---|---|---|---|
-| [rust-systems-track](rust-systems-track/README.md) | Private Rust fundamentals followed by quantized GEMM and an RTL-checked LIF/AER golden model | learning | Catalog metadata; basics private |
+| [rust-systems-track](rust-systems-track/README.md) | Follow private Rust fundamentals toward planned GEMM and LIF/AER systems projects | learning | Catalog metadata; basics private |
 
 Rust path: private Phase 0 basics → future public `rust-quant-gemm` → future public `lif-rust-golden` co-checked against `lif-spiking-core`. See [PLAN](rust-systems-track/PLAN.md) and [TRACKER](rust-systems-track/TRACKER.md). Private drill solutions are never cataloged as public projects.
 

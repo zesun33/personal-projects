@@ -10,8 +10,8 @@
 
 ## Last session
 
-- **Date:** 2026-10-01
-- **Done:** Reviewed the Rust plan during portfolio organization; added a focused workspace and cross-machine catalog support. No learning milestones completed. The offline Book setup from 2026-09-14 remains documented in `00-basics/BOOK.md`.
+- **Date:** 2026-10-05
+- **Done:** Clarified the public README orientation and its relationship to the planned GEMM and LIF/AER projects. Read PLAN and TRACKER; kept Phase 0, privacy, phase exit criteria, and the next learning action unchanged. No learning milestones completed.
 - **Blockers:** none
 
 ## Next action
