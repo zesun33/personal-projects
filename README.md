@@ -28,6 +28,8 @@ Use `--catalog-only` for a fresh parent clone or CI without child checkouts. See
 
 See [`UPGRADES.md`](UPGRADES.md) for portable GPU selection, measured GEMM comparisons, hardware evidence definitions, and npm release automation.
 
+See [`NPM_RELEASES.md`](NPM_RELEASES.md) for batch trusted-publisher setup and separate release workflows for the ten published npm packages.
+
 Each project keeps a separate GitHub repository and Git history. After pulling the parent on another machine, clone/pull the child repositories separately:
 
 ```bash
