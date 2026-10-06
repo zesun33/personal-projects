@@ -27,6 +27,10 @@
     {
       "name": "kernel-forge",
       "path": "kernel-forge"
+    },
+    {
+      "name": "hw-ml-tutorials",
+      "path": "hw-ml-tutorials"
     }
   ],
   "settings": {
@@ -85,6 +89,7 @@
       "cim-bit-serial-pe": true,
       "neuro-cim-tile": true,
       "tiny-tpu-systolic-array": true,
+      "hw-ml-tutorials": true,
       "rust-systems-track": true
     }
   },

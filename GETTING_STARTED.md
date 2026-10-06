@@ -2,6 +2,8 @@
 
 This portfolio connects algorithm performance, hardware design, and tools for testing both. You can use one repository independently or follow a route across related projects. Start with one small result, then choose the next stage from its README.
 
+Follow the separate [hardware and ML tutorial project](https://github.com/zesun33/hw-ml-tutorials) for eight consecutive lessons, runnable examples, deliberate failures, and troubleshooting.
+
 ## Choose a route
 
 | Goal | First repository | What you need | What to try next |

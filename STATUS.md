@@ -9,6 +9,7 @@ Maturity reflects the repository roadmap. It is not a fresh test result, silicon
 | Hardware agent tooling | 18 | 0 | 0 | 0 |
 | ML systems | 0 | 3 | 2 | 0 |
 | Silicon designs | 1 | 0 | 3 | 0 |
+| Practical tutorials | 0 | 1 | 0 | 0 |
 | Rust systems | 0 | 0 | 0 | 1 |
 
 | Project | Status | Verification entry point | Next milestone |
@@ -40,4 +41,5 @@ Maturity reflects the repository roadmap. It is not a fresh test result, silicon
 | [cim-bit-serial-pe](https://github.com/zesun33/cim-bit-serial-pe) | planned | not configured | Implement the documented arithmetic in RTL and check it against a software reference |
 | [neuro-cim-tile](https://github.com/zesun33/neuro-cim-tile) | planned | not configured | Implement and verify the digital periphery before adding calibrated device models |
 | [tiny-tpu-systolic-array](https://github.com/zesun33/tiny-tpu-systolic-array) | planned | not configured | Implement a small array and check its dataflow against a GEMM reference |
+| [hw-ml-tutorials](https://github.com/zesun33/hw-ml-tutorials) | active | `./scripts/verify.sh` → `npm ci` → `npm run mcp` | Extend checked examples with FIFO, formal, and physical-design lessons |
 | [rust-systems-track](rust-systems-track/README.md) | learning | learning | Finish Book chapters 1–2 and rustlings intro/variables (private) |

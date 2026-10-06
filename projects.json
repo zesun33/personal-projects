@@ -797,6 +797,48 @@
       }
     },
     {
+      "path": "hw-ml-tutorials",
+      "family": "tutorials",
+      "kind": "tutorial",
+      "status": "active",
+      "github": "https://github.com/zesun33/hw-ml-tutorials",
+      "verification": "available",
+      "description": "Learn practical hardware and GPU workflows with step-by-step tutorials and runnable examples",
+      "next_milestone": "Extend checked examples with FIFO, formal, and physical-design lessons",
+      "visibility": "public",
+      "verify_steps": [
+        [
+          "./scripts/verify.sh"
+        ],
+        [
+          "npm",
+          "ci"
+        ],
+        [
+          "npm",
+          "run",
+          "mcp"
+        ]
+      ],
+      "requires_gpu": false,
+      "requirements": "Python 3, Node 20+, npm, and Podman/Docker; GPU lessons have separate CUDA requirements",
+      "guide": {
+        "audience": "Learners and engineers who want concrete examples connecting the portfolio tools.",
+        "first_task": "Run the event-counter positive and negative tests, then follow the MCP workflow lesson.",
+        "outcome": "Passing functional checks, an intentional failure, JSON EDA reports, and optional GPU/model exercises.",
+        "scope": "Eight lessons and runnable hardware fixtures. GPU measurements require actual CUDA hardware; model exercises and recorded-data plots have narrower evidence.",
+        "start_file": "lessons/01-first-simulation.md",
+        "start_label": "First simulation tutorial",
+        "related": [
+          "hw-agent-scaffold",
+          "mcp-rtl-review",
+          "cuda-gemm-optimization",
+          "kernel-forge",
+          "lif-spiking-core"
+        ]
+      }
+    },
+    {
       "path": "rust-systems-track",
       "family": "rust",
       "kind": "meta",
@@ -883,7 +925,8 @@
       "hw-agent-scaffold",
       "gh-actions-for-hw",
       "kernel-forge",
-      "agentic-asic"
+      "agentic-asic",
+      "hw-ml-tutorials"
     ],
     "silicon-designs": [
       "lif-spiking-core",
@@ -904,10 +947,21 @@
       "parallel-computing-lab",
       "resnet-tensorrt-bench",
       "triton-flash-attention-lite",
-      "kernel-forge"
+      "kernel-forge",
+      "hw-ml-tutorials"
     ],
     "rust-track": [
       "rust-systems-track"
+    ],
+    "tutorials": [
+      "hw-ml-tutorials",
+      "hw-agent-scaffold",
+      "mcp-rtl-review",
+      "mcp-verilog",
+      "mcp-yosys",
+      "cuda-gemm-optimization",
+      "kernel-forge",
+      "lif-spiking-core"
     ]
   }
 }

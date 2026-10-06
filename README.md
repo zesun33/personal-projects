@@ -15,6 +15,8 @@ The projects connect two goals: understand how computation and data movement aff
 | Study event-driven neuromorphic RTL | [lif-spiking-core](https://github.com/zesun33/lif-spiking-core) | Neuron/tile/router source, testbenches, and verification notes |
 | Learn or discuss the unfinished projects | [PROJECT_GUIDE.md](PROJECT_GUIDE.md) | Clear exercise, architecture-draft, and roadmap boundaries |
 
+For consecutive hands-on lessons, use the separate [hw-ml-tutorials](https://github.com/zesun33/hw-ml-tutorials) repository.
+
 Read [GETTING_STARTED.md](GETTING_STARTED.md) for prerequisites, a first working example, and a glossary. The [project guide](PROJECT_GUIDE.md) explains who each repository is for, what to try first, and what currently exists.
 
 - Website: [zesun33.github.io](https://zesun33.github.io)
@@ -36,6 +38,7 @@ Open `personal-projects.code-workspace` in Cursor / VS Code for a multi-root wor
 ```bash
 python3 scripts/generate_catalog.py
 python3 scripts/generate_project_guides.py
+python3 scripts/export_website.py --website ../personal-website
 python3 scripts/check_catalog.py
 python3 scripts/check_catalog.py --network
 ```
@@ -117,6 +120,12 @@ Full EDA/GPU tests have runtime prerequisites. The RTL-review backend fix and pu
 | [cim-bit-serial-pe](https://github.com/zesun33/cim-bit-serial-pe) | Specify a proposed bit-serial compute-in-memory processing element | planned | GitHub source |
 | [neuro-cim-tile](https://github.com/zesun33/neuro-cim-tile) | Specify a proposed compute-in-memory tile and its digital/device-model boundaries | planned | GitHub source |
 | [tiny-tpu-systolic-array](https://github.com/zesun33/tiny-tpu-systolic-array) | Specify a proposed INT8 systolic-array dataflow and interface | planned | GitHub source |
+
+## Practical tutorials
+
+| Project | Purpose | Maturity | Distribution |
+|---|---|---|---|
+| [hw-ml-tutorials](https://github.com/zesun33/hw-ml-tutorials) | Learn practical hardware and GPU workflows with step-by-step tutorials and runnable examples | active | GitHub source |
 
 ## Rust systems
 

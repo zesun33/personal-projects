@@ -33,6 +33,7 @@ Generated from `projects.json`; project README introductions use the same metada
 - [cim-bit-serial-pe](#cim-bit-serial-pe)
 - [neuro-cim-tile](#neuro-cim-tile)
 - [tiny-tpu-systolic-array](#tiny-tpu-systolic-array)
+- [hw-ml-tutorials](#hw-ml-tutorials)
 - [rust-systems-track](#rust-systems-track)
 
 ## hw-agent-tooling
@@ -466,6 +467,22 @@ Specify a proposed INT8 systolic-array dataflow and interface.
 **Start here:** [Systolic dataflow proposal](https://github.com/zesun33/tiny-tpu-systolic-array/blob/main/ARCHITECTURE.md).
 
 **Related projects:** [cim-bit-serial-pe](https://github.com/zesun33/cim-bit-serial-pe), [cuda-gemm-optimization](https://github.com/zesun33/cuda-gemm-optimization).
+
+## hw-ml-tutorials
+
+Learn practical hardware and GPU workflows with step-by-step tutorials and runnable examples.
+
+**Who it is for:** Learners and engineers who want concrete examples connecting the portfolio tools.
+
+**First task:** Run the event-counter positive and negative tests, then follow the MCP workflow lesson.
+
+**What to expect:** Passing functional checks, an intentional failure, JSON EDA reports, and optional GPU/model exercises.
+
+**Current scope:** Eight lessons and runnable hardware fixtures. GPU measurements require actual CUDA hardware; model exercises and recorded-data plots have narrower evidence.
+
+**Start here:** [First simulation tutorial](https://github.com/zesun33/hw-ml-tutorials/blob/main/lessons/01-first-simulation.md).
+
+**Related projects:** [hw-agent-scaffold](https://github.com/zesun33/hw-agent-scaffold), [mcp-rtl-review](https://github.com/zesun33/mcp-rtl-review), [cuda-gemm-optimization](https://github.com/zesun33/cuda-gemm-optimization), [kernel-forge](https://github.com/zesun33/kernel-forge), [lif-spiking-core](https://github.com/zesun33/lif-spiking-core).
 
 ## rust-systems-track
 

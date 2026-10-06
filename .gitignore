@@ -34,6 +34,7 @@
 /cim-bit-serial-pe/
 /neuro-cim-tile/
 /tiny-tpu-systolic-array/
+/hw-ml-tutorials/
 # END GENERATED PROJECT CHECKOUTS
 
 # Rust systems track — phase dirs become standalone repos (meta keeps PLAN/TRACKER/resources)

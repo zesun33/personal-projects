@@ -5,7 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 FAMILIES = {'hw-agent': 'Hardware agent tooling', 'ml-systems': 'ML systems',
-            'silicon': 'Silicon designs', 'rust': 'Rust systems'}
+            'silicon': 'Silicon designs', 'tutorials': 'Practical tutorials', 'rust': 'Rust systems'}
 
 
 def load_catalog(root=ROOT):
