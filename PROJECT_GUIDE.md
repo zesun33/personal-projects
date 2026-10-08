@@ -478,7 +478,7 @@ Learn practical hardware and GPU workflows with step-by-step tutorials and runna
 
 **What to expect:** Passing functional checks, an intentional failure, JSON EDA reports, and optional GPU/model exercises.
 
-**Current scope:** Eight lessons and runnable hardware fixtures. GPU measurements require actual CUDA hardware; model exercises and recorded-data plots have narrower evidence.
+**Current scope:** Eight lessons and runnable hardware fixtures, a university resource library, a Windows setup guide, and an initial GCD course specification. The new ASIC course implementations are upcoming work; GPU measurements require actual CUDA hardware.
 
 **Start here:** [First simulation tutorial](https://github.com/zesun33/hw-ml-tutorials/blob/main/lessons/01-first-simulation.md).
 

@@ -4,6 +4,8 @@ This portfolio connects algorithm performance, hardware design, and tools for te
 
 Follow the separate [hardware and ML tutorial project](https://github.com/zesun33/hw-ml-tutorials) for eight consecutive lessons, runnable examples, deliberate failures, and troubleshooting.
 
+For learning on your Windows computer, start with its [small-step Windows guide](https://github.com/zesun33/hw-ml-tutorials/blob/main/WINDOWS.md). The [resource library](https://github.com/zesun33/hw-ml-tutorials/blob/main/resources/README.md) maps all catalog projects to courses and references, including public CMU/Stanford GitHub starters and MIT OCW. The guided [GCD → dot product → processor path](https://github.com/zesun33/hw-ml-tutorials/blob/main/courses/university-asic/README.md) begins with a specification; those new implementations are upcoming work.
+
 ## Choose a route
 
 | Goal | First repository | What you need | What to try next |

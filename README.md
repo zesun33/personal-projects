@@ -17,6 +17,8 @@ The projects connect two goals: understand how computation and data movement aff
 
 For consecutive hands-on lessons, use the separate [hw-ml-tutorials](https://github.com/zesun33/hw-ml-tutorials) repository.
 
+It also has a [university course/resource directory](https://github.com/zesun33/hw-ml-tutorials/blob/main/resources/README.md), a guided ASIC learning plan, and a [Windows setup guide](https://github.com/zesun33/hw-ml-tutorials/blob/main/WINDOWS.md) for progressing one small step at a time.
+
 Read [GETTING_STARTED.md](GETTING_STARTED.md) for prerequisites, a first working example, and a glossary. The [project guide](PROJECT_GUIDE.md) explains who each repository is for, what to try first, and what currently exists.
 
 - Website: [zesun33.github.io](https://zesun33.github.io)

@@ -804,7 +804,7 @@
       "github": "https://github.com/zesun33/hw-ml-tutorials",
       "verification": "available",
       "description": "Learn practical hardware and GPU workflows with step-by-step tutorials and runnable examples",
-      "next_milestone": "Extend checked examples with FIFO, formal, and physical-design lessons",
+      "next_milestone": "Implement and verify the guided GCD course before the accelerator and processor stages",
       "visibility": "public",
       "verify_steps": [
         [
@@ -826,7 +826,7 @@
         "audience": "Learners and engineers who want concrete examples connecting the portfolio tools.",
         "first_task": "Run the event-counter positive and negative tests, then follow the MCP workflow lesson.",
         "outcome": "Passing functional checks, an intentional failure, JSON EDA reports, and optional GPU/model exercises.",
-        "scope": "Eight lessons and runnable hardware fixtures. GPU measurements require actual CUDA hardware; model exercises and recorded-data plots have narrower evidence.",
+        "scope": "Eight lessons and runnable hardware fixtures, a university resource library, a Windows setup guide, and an initial GCD course specification. The new ASIC course implementations are upcoming work; GPU measurements require actual CUDA hardware.",
         "start_file": "lessons/01-first-simulation.md",
         "start_label": "First simulation tutorial",
         "related": [
